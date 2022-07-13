@@ -8,21 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		D3A6B96B287CADE500B105E7 /* PlantCareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B96A287CADE500B105E7 /* PlantCareApp.swift */; };
-		D3A6B96D287CADE500B105E7 /* PlantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B96C287CADE500B105E7 /* PlantListView.swift */; };
+		D3A6B96D287CADE500B105E7 /* MyCollectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B96C287CADE500B105E7 /* MyCollectionListView.swift */; };
 		D3A6B96F287CADE700B105E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A6B96E287CADE700B105E7 /* Assets.xcassets */; };
 		D3A6B972287CADE700B105E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A6B971287CADE700B105E7 /* Preview Assets.xcassets */; };
 		D3A6B97C287CAE4200B105E7 /* SplashPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B97B287CAE4200B105E7 /* SplashPage.swift */; };
-		D3A6B9B9287E0BB000B105E7 /* PlantListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9B8287E0BB000B105E7 /* PlantListViewModel.swift */; };
+		D3A6B9B9287E0BB000B105E7 /* MyCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9B8287E0BB000B105E7 /* MyCollectionViewModel.swift */; };
+		D3A6B9BE287E4C9800B105E7 /* StaticPlantDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9BD287E4C9800B105E7 /* StaticPlantDataStore.swift */; };
+		D3A6B9C0287E4FF400B105E7 /* StaticPlant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9BF287E4FF400B105E7 /* StaticPlant.swift */; };
+		D3A6B9C3287E661D00B105E7 /* StaticPlantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9C2287E661D00B105E7 /* StaticPlantListView.swift */; };
+		D3A6B9C7287E676600B105E7 /* StaticPlantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9C6287E676600B105E7 /* StaticPlantDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D3A6B967287CADE500B105E7 /* PlantCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A6B96A287CADE500B105E7 /* PlantCareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCareApp.swift; sourceTree = "<group>"; };
-		D3A6B96C287CADE500B105E7 /* PlantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListView.swift; sourceTree = "<group>"; };
+		D3A6B96C287CADE500B105E7 /* MyCollectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionListView.swift; sourceTree = "<group>"; };
 		D3A6B96E287CADE700B105E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3A6B971287CADE700B105E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D3A6B97B287CAE4200B105E7 /* SplashPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPage.swift; sourceTree = "<group>"; };
-		D3A6B9B8287E0BB000B105E7 /* PlantListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListViewModel.swift; sourceTree = "<group>"; };
+		D3A6B9B8287E0BB000B105E7 /* MyCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewModel.swift; sourceTree = "<group>"; };
+		D3A6B9BA287E19FA00B105E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A6B9BD287E4C9800B105E7 /* StaticPlantDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPlantDataStore.swift; sourceTree = "<group>"; };
+		D3A6B9BF287E4FF400B105E7 /* StaticPlant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPlant.swift; sourceTree = "<group>"; };
+		D3A6B9C2287E661D00B105E7 /* StaticPlantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPlantListView.swift; sourceTree = "<group>"; };
+		D3A6B9C6287E676600B105E7 /* StaticPlantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPlantDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +48,7 @@
 		D3A6B95E287CADE500B105E7 = {
 			isa = PBXGroup;
 			children = (
-				D3A6B9B8287E0BB000B105E7 /* PlantListViewModel.swift */,
+				D3A6B96A287CADE500B105E7 /* PlantCareApp.swift */,
 				D3A6B969287CADE500B105E7 /* PlantCare */,
 				D3A6B968287CADE500B105E7 /* Products */,
 			);
@@ -56,11 +65,10 @@
 		D3A6B969287CADE500B105E7 /* PlantCare */ = {
 			isa = PBXGroup;
 			children = (
-				D3A6B96A287CADE500B105E7 /* PlantCareApp.swift */,
 				D3A6B97A287CAE2500B105E7 /* Extensions */,
 				D3A6B979287CAE0A00B105E7 /* Models */,
 				D3A6B978287CAE0600B105E7 /* VIews */,
-				D3A6B96E287CADE700B105E7 /* Assets.xcassets */,
+				D3A6B9BB287E1C2400B105E7 /* Resources */,
 				D3A6B970287CADE700B105E7 /* Preview Content */,
 			);
 			path = PlantCare;
@@ -78,7 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				D3A6B97B287CAE4200B105E7 /* SplashPage.swift */,
-				D3A6B96C287CADE500B105E7 /* PlantListView.swift */,
+				D3A6B9C1287E65E800B105E7 /* StaticPlantListViews */,
+				D3A6B9BC287E2CE100B105E7 /* MyCollectionListViews */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -86,6 +95,8 @@
 		D3A6B979287CAE0A00B105E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D3A6B9BD287E4C9800B105E7 /* StaticPlantDataStore.swift */,
+				D3A6B9BF287E4FF400B105E7 /* StaticPlant.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,6 +106,33 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D3A6B9BB287E1C2400B105E7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3A6B96E287CADE700B105E7 /* Assets.xcassets */,
+				D3A6B9BA287E19FA00B105E7 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D3A6B9BC287E2CE100B105E7 /* MyCollectionListViews */ = {
+			isa = PBXGroup;
+			children = (
+				D3A6B9B8287E0BB000B105E7 /* MyCollectionViewModel.swift */,
+				D3A6B96C287CADE500B105E7 /* MyCollectionListView.swift */,
+			);
+			path = MyCollectionListViews;
+			sourceTree = "<group>";
+		};
+		D3A6B9C1287E65E800B105E7 /* StaticPlantListViews */ = {
+			isa = PBXGroup;
+			children = (
+				D3A6B9C2287E661D00B105E7 /* StaticPlantListView.swift */,
+				D3A6B9C6287E676600B105E7 /* StaticPlantDetailView.swift */,
+			);
+			path = StaticPlantListViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,9 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3A6B96D287CADE500B105E7 /* PlantListView.swift in Sources */,
+				D3A6B96D287CADE500B105E7 /* MyCollectionListView.swift in Sources */,
+				D3A6B9C7287E676600B105E7 /* StaticPlantDetailView.swift in Sources */,
+				D3A6B9C0287E4FF400B105E7 /* StaticPlant.swift in Sources */,
+				D3A6B9BE287E4C9800B105E7 /* StaticPlantDataStore.swift in Sources */,
 				D3A6B97C287CAE4200B105E7 /* SplashPage.swift in Sources */,
-				D3A6B9B9287E0BB000B105E7 /* PlantListViewModel.swift in Sources */,
+				D3A6B9C3287E661D00B105E7 /* StaticPlantListView.swift in Sources */,
+				D3A6B9B9287E0BB000B105E7 /* MyCollectionViewModel.swift in Sources */,
 				D3A6B96B287CADE500B105E7 /* PlantCareApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,9 +344,9 @@
 				DEVELOPMENT_TEAM = TJJN6CB2K4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlantCare/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -331,9 +373,9 @@
 				DEVELOPMENT_TEAM = TJJN6CB2K4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlantCare/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

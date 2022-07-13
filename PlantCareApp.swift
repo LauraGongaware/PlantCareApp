@@ -11,7 +11,7 @@ import SwiftUI
 struct PlantCareApp: App {
     var body: some Scene {
         WindowGroup {
-            PlantListView()
+            SplashPage()
         }
     }
 }

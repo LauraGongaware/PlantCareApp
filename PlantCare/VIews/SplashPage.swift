@@ -8,30 +8,37 @@
 import SwiftUI
 
 struct SplashPage: View {
-    
+
     @State var isActive:Bool = false
-    
+
     var body: some View {
-        
+
         ZStack {
+            ZStack {
             if self.isActive {
-                PlantListView()
+                MyCollectionListView()
             } else {
-                Color(red: 0.67, green: 0.80, blue: 0.68).edgesIgnoringSafeArea(.all)
-                Text("Flourish with ease")
+                Color("bg").edgesIgnoringSafeArea(.all)
+                Image("splash")
+                    .resizable()
+                    .frame(width: 300, height: 300, alignment: .center)
+                Text("Flourishing simplified")
                     .font(Font.largeTitle)
                     .foregroundColor(Color.white)
-                
-        }
-    } .onAppear {
+
+                }
+            }
+        }.onAppear(perform: splashScreen)
+    }
+    func splashScreen() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
             withAnimation {
-                self.isActive = true
-                }
+        self.isActive = true
             }
         }
     }
 }
+
 struct SplashPage_Previews: PreviewProvider {
     static var previews: some View {
         SplashPage()
