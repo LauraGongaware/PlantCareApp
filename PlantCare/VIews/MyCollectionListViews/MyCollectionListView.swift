@@ -15,11 +15,18 @@ struct MyCollectionListView: View {
         NavigationView {
             Color("bg").edgesIgnoringSafeArea(.all)
                 ScrollView {
-
-            VStack {
-        
-
+                    List {
+                        Section("My Collection") {
+                            ForEach (viewModel.collectionItems) { collection in
+//                                NavigationLink {
+//                                    
+//                                }
+                            }
+                        }
+                        
                     }
+
+            
                 }
             }
         }

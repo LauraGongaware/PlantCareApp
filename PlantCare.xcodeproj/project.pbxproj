@@ -17,6 +17,9 @@
 		D3A6B9C0287E4FF400B105E7 /* StaticPlant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9BF287E4FF400B105E7 /* StaticPlant.swift */; };
 		D3A6B9C3287E661D00B105E7 /* StaticPlantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9C2287E661D00B105E7 /* StaticPlantListView.swift */; };
 		D3A6B9C7287E676600B105E7 /* StaticPlantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9C6287E676600B105E7 /* StaticPlantDetailView.swift */; };
+		D3A6B9CD287F5BFE00B105E7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9CC287F5BFE00B105E7 /* MenuView.swift */; };
+		D3A6B9CF287F90C500B105E7 /* MyCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9CE287F90C500B105E7 /* MyCollection.swift */; };
+		D3A6B9D1287F945400B105E7 /* MyCollectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9D0287F945400B105E7 /* MyCollectionDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		D3A6B9BF287E4FF400B105E7 /* StaticPlant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPlant.swift; sourceTree = "<group>"; };
 		D3A6B9C2287E661D00B105E7 /* StaticPlantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPlantListView.swift; sourceTree = "<group>"; };
 		D3A6B9C6287E676600B105E7 /* StaticPlantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPlantDetailView.swift; sourceTree = "<group>"; };
+		D3A6B9CC287F5BFE00B105E7 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		D3A6B9CE287F90C500B105E7 /* MyCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollection.swift; sourceTree = "<group>"; };
+		D3A6B9D0287F945400B105E7 /* MyCollectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 				D3A6B97B287CAE4200B105E7 /* SplashPage.swift */,
 				D3A6B9C1287E65E800B105E7 /* StaticPlantListViews */,
 				D3A6B9BC287E2CE100B105E7 /* MyCollectionListViews */,
+				D3A6B9CC287F5BFE00B105E7 /* MenuView.swift */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -97,6 +104,7 @@
 			children = (
 				D3A6B9BD287E4C9800B105E7 /* StaticPlantDataStore.swift */,
 				D3A6B9BF287E4FF400B105E7 /* StaticPlant.swift */,
+				D3A6B9CE287F90C500B105E7 /* MyCollection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,6 +130,7 @@
 			children = (
 				D3A6B9B8287E0BB000B105E7 /* MyCollectionViewModel.swift */,
 				D3A6B96C287CADE500B105E7 /* MyCollectionListView.swift */,
+				D3A6B9D0287F945400B105E7 /* MyCollectionDetailView.swift */,
 			);
 			path = MyCollectionListViews;
 			sourceTree = "<group>";
@@ -206,9 +215,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3A6B96D287CADE500B105E7 /* MyCollectionListView.swift in Sources */,
+				D3A6B9D1287F945400B105E7 /* MyCollectionDetailView.swift in Sources */,
+				D3A6B9CF287F90C500B105E7 /* MyCollection.swift in Sources */,
 				D3A6B9C7287E676600B105E7 /* StaticPlantDetailView.swift in Sources */,
 				D3A6B9C0287E4FF400B105E7 /* StaticPlant.swift in Sources */,
 				D3A6B9BE287E4C9800B105E7 /* StaticPlantDataStore.swift in Sources */,
+				D3A6B9CD287F5BFE00B105E7 /* MenuView.swift in Sources */,
 				D3A6B97C287CAE4200B105E7 /* SplashPage.swift in Sources */,
 				D3A6B9C3287E661D00B105E7 /* StaticPlantListView.swift in Sources */,
 				D3A6B9B9287E0BB000B105E7 /* MyCollectionViewModel.swift in Sources */,
@@ -338,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantCare/Preview Content\"";
@@ -354,8 +367,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = GongawareLaura.PlantCare;
+				PRODUCT_BUNDLE_IDENTIFIER = GongawareLaura.PlantCareApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -367,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantCare/Preview Content\"";
@@ -383,8 +398,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = GongawareLaura.PlantCare;
+				PRODUCT_BUNDLE_IDENTIFIER = GongawareLaura.PlantCareApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -14,22 +14,19 @@ struct StaticPlantListView: View {
     var body: some View {
 
         NavigationView {
-            Color("bg").edgesIgnoringSafeArea(.all)
-            
-            ScrollView {
-                VStack {
+            ZStack {
+                Color("bg").edgesIgnoringSafeArea(.all)
                     List{
                         ForEach(StaticPlantDataStore.staticplants) { staticplant in
                             NavigationLink {
                                 StaticPlantDetailView(staticplant: .constant(staticplant))
                             } label : {
-                                HStack {
                                     Text(staticplant.plantName)
-                                }
+                                .navigationTitle(Text("Plants"))
                             }
                         }
-                    }
-                }
+                    }.cornerRadius(12)
+                    .padding()
             }
         }
     }
