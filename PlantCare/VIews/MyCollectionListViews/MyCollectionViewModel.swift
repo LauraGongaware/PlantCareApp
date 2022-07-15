@@ -19,23 +19,22 @@ class MyCollectionViewModel: ObservableObject {
         saveToPersistenceStore()
     }
 
-    func update(_ collectionItem: MyCollection, _ plantName: String) {
+    func update(_ collectionItem: MyCollection, _ plantName: String, _ scientificName: String, _ water: String, _ sunlight: String, _ description: String) {
         guard let index = collectionItems.firstIndex(of: collectionItem) else { return }
         collectionItems[index].plantName = plantName
-        
         saveToPersistenceStore()
     }
     
     func createPersistenceStore() -> URL {
         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let fileURL = url[0].appendingPathComponent("collectionItems")
+        let fileURL = url[0].appendingPathComponent("collectionItems.json")
         return fileURL
     }
 
     func saveToPersistenceStore() {
         do {
             let data = try JSONEncoder().encode(collectionItems)
-            try data.write(to:createPersistenceStore())
+            try data.write(to: createPersistenceStore())
             
         } catch {
             print("Error encoding.")

@@ -16,9 +16,9 @@ struct SplashPage: View {
         ZStack {
             ZStack {
             if self.isActive {
-                StaticPlantListView()
-                //To be eventually moved to
-//                MyCollectionListView()
+//                StaticPlantListView()
+                MyCollectionListView()
+
             } else {
                 Color("bg").edgesIgnoringSafeArea(.all)
                 Image("splash")

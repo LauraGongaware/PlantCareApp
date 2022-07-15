@@ -11,9 +11,9 @@ import SwiftUI
 struct MyCollection: Identifiable, Codable {
     var plantName: String
     var scientificName: String
-    var description: String
+    var water: String
     var sunlight: String
-    var plantPhoto: String
+    var description: String
     var id = UUID()
     
 }
