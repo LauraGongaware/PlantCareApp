@@ -9,7 +9,12 @@ import SwiftUI
 
 struct StaticPlantDetailView: View {
     
-    @Binding var staticplant : StaticPlant
+    var staticPlantList: Plant
+    
+    @ObservedObject var collectionViewModel: StaticCollectionViewModel
+    
+    @Environment(\.dismiss) private var dismiss
+    
     
     
     var body: some View {
@@ -21,36 +26,49 @@ struct StaticPlantDetailView: View {
                     Circle()
                         .foregroundColor(.white)
                         .frame(width: 300, height: 300)
-                    Image(staticplant.staticImage)
+                    Image(staticPlantList.staticImage)
                         .resizable()
                         .scaledToFit()
                 }
-               
-                Text(staticplant.plantName)
+                VStack {
+                Text(staticPlantList.plantName)
                     .font(.title)
-                Text(staticplant.scientificName)
+                Text(staticPlantList.scientificName)
                     .font(.subheadline)
                     .italic()
-                WaterDroplets(staticplant: staticplant)
-                Sunlight(staticplant: staticplant)
-                Text(staticplant.description)
+                
+                WaterDroplets(staticPlantList: staticPlantList.water)
+                Sunlight(staticPlantList: staticPlantList.sunlight)
+                Text(staticPlantList.description)
                     .multilineTextAlignment(.center)
                     .background(.white)
                     .cornerRadius(12)
-//                Button(action: self.list.append("My Collection") ){
-//                    
-//                } label: {
-//                    Image(systemName: "leaf.fill")
-//                }
+                Button {
+                    prepareForAddtoCollectionItem(plantName: staticPlantList.plantName, scientificName: staticPlantList.scientificName, water: staticPlantList.water, sunlight: staticPlantList.sunlight, description: staticPlantList.description, toxicity: staticPlantList.toxicity, staticImage: staticPlantList.staticImage)
+                    dismiss()
+
+                } label: {
+                    ZStack {
+                        // very bottom
+                        Rectangle().fill(.ultraThinMaterial)
+                            .cornerRadius(12)
+                        // very top
+                        Text("Add to Collection")
+                    }
+                }.frame(width: 200, height: 50)
             
+            
+                }.padding()
+                
             }.padding()
         }
-    
     }
-    struct WaterDroplets: View {
-    var staticplant : StaticPlant
+    
+    
+struct WaterDroplets: View {
+    var water: staticPlantList.water
     var body: some View {
-        if staticplant.water == 1 {
+        if staticPlantList.water == 1 {
             HStack {
                 Image(systemName: "drop.fill")
                     .foregroundColor(.cyan)
@@ -64,7 +82,7 @@ struct StaticPlantDetailView: View {
                     .foregroundColor(.cyan)
             }
         } else if
-            staticplant.water == 2 {
+            staticPlantList.water == 2 {
             HStack {
             Image(systemName: "drop.fill")
                     .foregroundColor(.cyan)
@@ -79,7 +97,7 @@ struct StaticPlantDetailView: View {
             }
         }
         else if
-            staticplant.water == 3 {
+            staticPlantList.water == 3 {
             HStack {
             Image(systemName: "drop.fill")
                     .foregroundColor(.cyan)
@@ -94,7 +112,7 @@ struct StaticPlantDetailView: View {
             }
         }
         else if
-            staticplant.water == 4 {
+            staticPlantList.water == 4 {
             HStack {
             Image(systemName: "drop.fill")
                     .foregroundColor(.cyan)
@@ -109,7 +127,7 @@ struct StaticPlantDetailView: View {
             }
         }
         else if
-            staticplant.water == 5 {
+            staticPlantList.water == 5 {
             HStack {
             Image(systemName: "drop.fill")
                     .foregroundColor(.cyan)
@@ -127,9 +145,9 @@ struct StaticPlantDetailView: View {
     }
     
     struct Sunlight: View {
-    var staticplant : StaticPlant
+    var staticPlantList : Plant
     var body: some View {
-        if staticplant.sunlight == 1 {
+        if staticPlantList.sunlight == 1 {
             HStack {
                 Image(systemName: "sun.max.fill")
                     .foregroundColor(.yellow)
@@ -143,7 +161,7 @@ struct StaticPlantDetailView: View {
                     .foregroundColor(.yellow)
             }
         } else if
-            staticplant.sunlight == 2 {
+            staticPlantList.sunlight == 2 {
             HStack {
             Image(systemName: "sun.max.fill")
                     .foregroundColor(.yellow)
@@ -158,7 +176,7 @@ struct StaticPlantDetailView: View {
             }
         }
         else if
-            staticplant.sunlight == 3 {
+            staticPlantList.sunlight == 3 {
             HStack {
             Image(systemName: "sun.max.fill")
                     .foregroundColor(.yellow)
@@ -173,7 +191,7 @@ struct StaticPlantDetailView: View {
             }
         }
         else if
-            staticplant.sunlight == 4 {
+            staticPlantList.sunlight == 4 {
             HStack {
             Image(systemName: "sun.max.fill")
                     .foregroundColor(.yellow)
@@ -188,7 +206,7 @@ struct StaticPlantDetailView: View {
             }
         }
         else if
-            staticplant.sunlight == 5 {
+            staticPlantList.sunlight == 5 {
             HStack {
             Image(systemName: "sun.max.fill")
                     .foregroundColor(.yellow)
@@ -204,10 +222,25 @@ struct StaticPlantDetailView: View {
             }
         }
     }
-}
-
-struct StaticPlantDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        StaticPlantDetailView(staticplant: .constant(StaticPlant(plantName: "Monstera", scientificName: "Monstera deliciosa", water: 3, sunlight: 3, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat no", toxicity: "yes", staticImage: "monstera")))
+    func prepareForAddtoCollectionItem(plantName: String? , scientificName: String?, water: Int?, sunlight: Int?, description: String?, toxicity: Bool?, staticImage: String?) {
+        guard let plantName = plantName, !plantName.isEmpty,
+        let scientificName = scientificName, !scientificName.isEmpty,
+        let water = water,
+        let sunlight = sunlight,
+        let description = description, !description.isEmpty,
+        let staticImage = staticImage, !staticImage.isEmpty
+                
+        else { return }
+      
+        let addToPlantCollection = Plant(plantName: plantName, scientificName: scientificName, water: water, sunlight: sunlight, description: description, toxicity: false, staticImage: staticImage)
+        
+        collectionViewModel.createCollectionItem(addToPlantCollection)
+        
     }
 }
+
+//struct StaticPlantDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        StaticPlantDetailView()
+//    }
+//}

@@ -9,26 +9,30 @@ import SwiftUI
 
 struct StaticPlantListView: View {
     
-    @State var viewModel = StaticPlantDataStore()
+   @ObservedObject var viewModel = StaticCollectionViewModel()
+    
     
     var body: some View {
-
         NavigationView {
+            
             ZStack {
                 Color("bg").edgesIgnoringSafeArea(.all)
                     List{
-                        ForEach(StaticPlantDataStore.staticplants) { staticplant in
+                        ForEach(viewModel.staticPlants) { staticPlant in
                             NavigationLink {
-                                StaticPlantDetailView(staticplant: .constant(staticplant))
+                                StaticPlantDetailView(staticPlantList: staticPlant, collectionViewModel: viewModel)
                             } label : {
-                                    Text(staticplant.plantName)
+                                    Text(staticPlant.plantName)
                                 .navigationTitle(Text("Plants"))
                             }
                         }
                     }.cornerRadius(12)
                     .padding()
+                   
+        
             }
         }
+        .navigationViewStyle(.stack)
     }
 }
 

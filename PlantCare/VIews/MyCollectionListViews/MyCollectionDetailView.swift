@@ -6,16 +6,23 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct MyCollectionDetailView: View {
     var collectionItem: MyCollection?
     
     @ObservedObject var collectionViewModel: MyCollectionViewModel
+    
     @State var plantNameText: String = ""
     @State var scientificNameText: String = ""
     @State var waterText: String = ""
     @State var sunlightText: String = ""
     @State var descriptionText: String = ""
+    
+//    @State private var isShowPhotoLibrary = false
+//    @State private var image = UIImage()
+//    @Binding var selectedImage: UIImage
+//    @Environment(\.presentationMode) private var presentationMode
    
     @Environment(\.dismiss) private var dismiss
     
@@ -27,24 +34,29 @@ struct MyCollectionDetailView: View {
                     Circle()
                         .foregroundColor(.white)
                         .frame(width: 300, height: 300)
+                    
                     Image("monstera")
                         .resizable()
                         .scaledToFit()
                 }
+                //
+//                VStack {
+//                Button (action: {
+//                        self.isShowPhotoLibrary = true
+//                    }) { Image(systemName: "camera")
+//                            .foregroundColor(.black)
+//                }
+//            }
+//                .sheet(isPresented: $isShowPhotoLibrary) {
+//                ImagePicker(sourceType: .photoLibrary)
+//            }
+                //Button Camera Activate
                 VStack(alignment: .center) {
                     TextField("Plant Name", text: $plantNameText)
                     TextField("Scientific Name", text: $scientificNameText)
                     TextField("Water", text: $waterText)
                     TextField("Sunlight", text: $sunlightText)
-
-//                DisplayWater(waterDrops: staticplant.water)
-                
-                TextEditor(text: $descriptionText)
-//                Button(action: self.list.append("My Collection") ){
-//
-//                } label: {
-//                    Image(systemName: "leaf.fill")
-//                }
+                    TextEditor(text: $descriptionText)
                 }
                 Button {
                     if collectionItem == nil {
@@ -76,6 +88,7 @@ struct MyCollectionDetailView: View {
                     descriptionText = collectionItem.description
         }
     }
+        
 }
     func prepareForCreateCollectionItem(plantName: String? , scientificName: String?, water: String?, sunlight: String?, description: String?) {
         guard let plantName = plantName, !plantName.isEmpty,
@@ -104,6 +117,9 @@ struct MyCollectionDetailView: View {
             collectionViewModel.update(collectionItem, plantName, scientificName, water, sunlight, description)
         }
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    }
 }
 
 struct MyCollectionDetailView_Previews: PreviewProvider {
@@ -113,3 +129,17 @@ struct MyCollectionDetailView_Previews: PreviewProvider {
         }
     }
 }
+
+//struct ImagePicker: UIViewControllerRepresentable {
+//    var sourceType: UIImagePickerController.SourceType = .photoLibrary
+//    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
+//
+//        let imagePicker = UIImagePickerController()
+//        imagePicker.allowsEditing = false
+//        imagePicker.sourceType = sourceType
+//
+//        return imagePicker
+//        }
+//    func updateUIViewController(_ uiViewController: UIViewControllerType, context: UIViewControllerRepresentableContext<ImagePicker>) {
+//        }
+//    }

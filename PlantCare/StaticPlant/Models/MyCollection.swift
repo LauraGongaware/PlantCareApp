@@ -14,6 +14,7 @@ struct MyCollection: Identifiable, Codable {
     var water: String
     var sunlight: String
     var description: String
+    var date = Date()
     var id = UUID()
     
 }

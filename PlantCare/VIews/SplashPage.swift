@@ -17,7 +17,8 @@ struct SplashPage: View {
             ZStack {
             if self.isActive {
 //                StaticPlantListView()
-                MyCollectionListView()
+//                MyCollectionListView()
+                ContentView()
 
             } else {
                 Color("bg").edgesIgnoringSafeArea(.all)

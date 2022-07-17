@@ -8,23 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		D349563B2880FB9E0022D7DD /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D349563A2880FB9E0022D7DD /* InfoView.swift */; };
+		D3537E6828820BBC00D64270 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537E6728820BBC00D64270 /* Date+Ext.swift */; };
+		D3537E7028825C6500D64270 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537E6F28825C6500D64270 /* TabBar.swift */; };
+		D3537E722882875300D64270 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537E712882875300D64270 /* ContentView.swift */; };
+		D3537E74288321D900D64270 /* StaticPlantCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537E73288321D900D64270 /* StaticPlantCollectionViewModel.swift */; };
 		D3A6B96B287CADE500B105E7 /* PlantCareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B96A287CADE500B105E7 /* PlantCareApp.swift */; };
 		D3A6B96D287CADE500B105E7 /* MyCollectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B96C287CADE500B105E7 /* MyCollectionListView.swift */; };
 		D3A6B96F287CADE700B105E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A6B96E287CADE700B105E7 /* Assets.xcassets */; };
 		D3A6B972287CADE700B105E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A6B971287CADE700B105E7 /* Preview Assets.xcassets */; };
 		D3A6B97C287CAE4200B105E7 /* SplashPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B97B287CAE4200B105E7 /* SplashPage.swift */; };
 		D3A6B9B9287E0BB000B105E7 /* MyCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9B8287E0BB000B105E7 /* MyCollectionViewModel.swift */; };
-		D3A6B9BE287E4C9800B105E7 /* StaticPlantDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9BD287E4C9800B105E7 /* StaticPlantDataStore.swift */; };
-		D3A6B9C0287E4FF400B105E7 /* StaticPlant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9BF287E4FF400B105E7 /* StaticPlant.swift */; };
+		D3A6B9C0287E4FF400B105E7 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9BF287E4FF400B105E7 /* Plant.swift */; };
 		D3A6B9C3287E661D00B105E7 /* StaticPlantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9C2287E661D00B105E7 /* StaticPlantListView.swift */; };
 		D3A6B9C7287E676600B105E7 /* StaticPlantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9C6287E676600B105E7 /* StaticPlantDetailView.swift */; };
-		D3A6B9CD287F5BFE00B105E7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9CC287F5BFE00B105E7 /* MenuView.swift */; };
 		D3A6B9CF287F90C500B105E7 /* MyCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9CE287F90C500B105E7 /* MyCollection.swift */; };
 		D3A6B9D1287F945400B105E7 /* MyCollectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B9D0287F945400B105E7 /* MyCollectionDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D349563A2880FB9E0022D7DD /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		D3537E6728820BBC00D64270 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		D3537E6F28825C6500D64270 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		D3537E712882875300D64270 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D3537E73288321D900D64270 /* StaticPlantCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPlantCollectionViewModel.swift; sourceTree = "<group>"; };
 		D3A6B967287CADE500B105E7 /* PlantCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A6B96A287CADE500B105E7 /* PlantCareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCareApp.swift; sourceTree = "<group>"; };
 		D3A6B96C287CADE500B105E7 /* MyCollectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionListView.swift; sourceTree = "<group>"; };
@@ -33,11 +39,9 @@
 		D3A6B97B287CAE4200B105E7 /* SplashPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPage.swift; sourceTree = "<group>"; };
 		D3A6B9B8287E0BB000B105E7 /* MyCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewModel.swift; sourceTree = "<group>"; };
 		D3A6B9BA287E19FA00B105E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3A6B9BD287E4C9800B105E7 /* StaticPlantDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPlantDataStore.swift; sourceTree = "<group>"; };
-		D3A6B9BF287E4FF400B105E7 /* StaticPlant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPlant.swift; sourceTree = "<group>"; };
+		D3A6B9BF287E4FF400B105E7 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		D3A6B9C2287E661D00B105E7 /* StaticPlantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPlantListView.swift; sourceTree = "<group>"; };
 		D3A6B9C6287E676600B105E7 /* StaticPlantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPlantDetailView.swift; sourceTree = "<group>"; };
-		D3A6B9CC287F5BFE00B105E7 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		D3A6B9CE287F90C500B105E7 /* MyCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollection.swift; sourceTree = "<group>"; };
 		D3A6B9D0287F945400B105E7 /* MyCollectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,8 +69,8 @@
 		D34956392880EBA80022D7DD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D3A6B9BF287E4FF400B105E7 /* StaticPlant.swift */,
-				D3A6B9BD287E4C9800B105E7 /* StaticPlantDataStore.swift */,
+				D3A6B9CE287F90C500B105E7 /* MyCollection.swift */,
+				D3A6B9BF287E4FF400B105E7 /* Plant.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				D34956382880EB870022D7DD /* StaticPlant */,
-				D3A6B979287CAE0A00B105E7 /* Models */,
 				D3A6B978287CAE0600B105E7 /* VIews */,
 				D3A6B97A287CAE2500B105E7 /* Extensions */,
 				D3A6B9BB287E1C2400B105E7 /* Resources */,
@@ -113,24 +116,18 @@
 			children = (
 				D3A6B96A287CADE500B105E7 /* PlantCareApp.swift */,
 				D3A6B97B287CAE4200B105E7 /* SplashPage.swift */,
-				D3A6B9BC287E2CE100B105E7 /* MyCollectionListViews */,
-				D3A6B9CC287F5BFE00B105E7 /* MenuView.swift */,
+				D3537E712882875300D64270 /* ContentView.swift */,
 				D349563A2880FB9E0022D7DD /* InfoView.swift */,
+				D3A6B9BC287E2CE100B105E7 /* MyCollectionListViews */,
+				D3537E6F28825C6500D64270 /* TabBar.swift */,
 			);
 			path = VIews;
-			sourceTree = "<group>";
-		};
-		D3A6B979287CAE0A00B105E7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D3A6B9CE287F90C500B105E7 /* MyCollection.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		D3A6B97A287CAE2500B105E7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D3537E6728820BBC00D64270 /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -159,6 +156,7 @@
 			children = (
 				D3A6B9C2287E661D00B105E7 /* StaticPlantListView.swift */,
 				D3A6B9C6287E676600B105E7 /* StaticPlantDetailView.swift */,
+				D3537E73288321D900D64270 /* StaticPlantCollectionViewModel.swift */,
 			);
 			path = StaticPlantListViews;
 			sourceTree = "<group>";
@@ -235,13 +233,15 @@
 			files = (
 				D3A6B96D287CADE500B105E7 /* MyCollectionListView.swift in Sources */,
 				D3A6B9D1287F945400B105E7 /* MyCollectionDetailView.swift in Sources */,
+				D3537E6828820BBC00D64270 /* Date+Ext.swift in Sources */,
 				D3A6B9CF287F90C500B105E7 /* MyCollection.swift in Sources */,
 				D3A6B9C7287E676600B105E7 /* StaticPlantDetailView.swift in Sources */,
 				D349563B2880FB9E0022D7DD /* InfoView.swift in Sources */,
-				D3A6B9C0287E4FF400B105E7 /* StaticPlant.swift in Sources */,
-				D3A6B9BE287E4C9800B105E7 /* StaticPlantDataStore.swift in Sources */,
-				D3A6B9CD287F5BFE00B105E7 /* MenuView.swift in Sources */,
+				D3A6B9C0287E4FF400B105E7 /* Plant.swift in Sources */,
+				D3537E7028825C6500D64270 /* TabBar.swift in Sources */,
 				D3A6B97C287CAE4200B105E7 /* SplashPage.swift in Sources */,
+				D3537E722882875300D64270 /* ContentView.swift in Sources */,
+				D3537E74288321D900D64270 /* StaticPlantCollectionViewModel.swift in Sources */,
 				D3A6B9C3287E661D00B105E7 /* StaticPlantListView.swift in Sources */,
 				D3A6B9B9287E0BB000B105E7 /* MyCollectionViewModel.swift in Sources */,
 				D3A6B96B287CADE500B105E7 /* PlantCareApp.swift in Sources */,

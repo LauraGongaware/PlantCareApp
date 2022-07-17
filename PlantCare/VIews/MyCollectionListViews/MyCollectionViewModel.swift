@@ -14,6 +14,7 @@ class MyCollectionViewModel: ObservableObject {
 //
     @Published var collectionItems: [MyCollection] = []
     
+    
     func createCollectionItem(_ collectionItem: MyCollection) {
         collectionItems.append(collectionItem)
         saveToPersistenceStore()
@@ -22,6 +23,10 @@ class MyCollectionViewModel: ObservableObject {
     func update(_ collectionItem: MyCollection, _ plantName: String, _ scientificName: String, _ water: String, _ sunlight: String, _ description: String) {
         guard let index = collectionItems.firstIndex(of: collectionItem) else { return }
         collectionItems[index].plantName = plantName
+        saveToPersistenceStore()
+    }
+    func removeCollectionItem(indexSet: IndexSet) {
+        collectionItems.remove(atOffsets: indexSet)
         saveToPersistenceStore()
     }
     
