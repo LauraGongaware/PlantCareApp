@@ -12,24 +12,31 @@ struct MyCollectionDetailView: View {
     var collectionItem: MyCollection?
     
     @ObservedObject var collectionViewModel: MyCollectionViewModel
+    @ObservedObject var addedDateViewModel : AddedDateViewModel
     
     @State var plantNameText: String = ""
     @State var scientificNameText: String = ""
     @State var waterText: String = ""
     @State var sunlightText: String = ""
     @State var descriptionText: String = ""
-    
-//    @State private var isShowPhotoLibrary = false
-//    @State private var image = UIImage()
-//    @Binding var selectedImage: UIImage
-//    @Environment(\.presentationMode) private var presentationMode
    
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         ZStack {
             Color("bg").edgesIgnoringSafeArea(.all)
+            ZStack(alignment: .topTrailing) {
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        FloatingMenu()
+                            .padding()
+                    }
             VStack {
+                NavigationLink(destination: JournalView()) {
+                  Image(systemName: "note.text")
+                        .foregroundColor(.black)
+                }
                 ZStack {
                     Circle()
                         .foregroundColor(.white)
@@ -39,18 +46,6 @@ struct MyCollectionDetailView: View {
                         .resizable()
                         .scaledToFit()
                 }
-                //
-//                VStack {
-//                Button (action: {
-//                        self.isShowPhotoLibrary = true
-//                    }) { Image(systemName: "camera")
-//                            .foregroundColor(.black)
-//                }
-//            }
-//                .sheet(isPresented: $isShowPhotoLibrary) {
-//                ImagePicker(sourceType: .photoLibrary)
-//            }
-                //Button Camera Activate
                 VStack(alignment: .center) {
                     TextField("Plant Name", text: $plantNameText)
                     TextField("Scientific Name", text: $scientificNameText)
@@ -58,27 +53,30 @@ struct MyCollectionDetailView: View {
                     TextField("Sunlight", text: $sunlightText)
                     TextEditor(text: $descriptionText)
                 }
-                Button {
-                    if collectionItem == nil {
-                        prepareForCreateCollectionItem(plantName: plantNameText, scientificName: scientificNameText, water: waterText, sunlight: sunlightText, description: descriptionText)
-                    } else {
-                        prepareForUpdateCollectionItem()
-                    }
-                    
-                    dismiss()
-                    
-                } label: {
-                    ZStack {
-                        // very bottom
-                        Rectangle().fill(.ultraThinMaterial)
-                            .cornerRadius(12)
-                        // very top
-                        Text(collectionItem == nil ? "Save" : "Update")
-                    }
-                }.frame(width: UIScreen.main.bounds.width - 40, height: 55)
+                HStack {
+                    Button {
+                        if collectionItem == nil {
+                            prepareForCreateCollectionItem(plantName: plantNameText, scientificName: scientificNameText, water: waterText, sunlight: sunlightText, description: descriptionText)
+                            addedDateViewModel.createAddedDate(addedDate: AddedDate())
+                        } else {
+                            prepareForUpdateCollectionItem()
+                        }
+                        dismiss()
+                        
+                    } label: {
+                        ZStack {
+                            // very bottom
+                            Rectangle().fill(.ultraThinMaterial)
+                                .cornerRadius(12)
+                            // very top
+                            Text(collectionItem == nil ? "Save" : "Update")
+                        }
+                }.frame(width: 250, height: 55)
+            
+                }
             }.padding()
             
-            }.navigationTitle("Detail View")
+            }
             .onAppear {
                 if let collectionItem = collectionItem {
                     plantNameText = collectionItem.plantName
@@ -125,21 +123,7 @@ struct MyCollectionDetailView: View {
 struct MyCollectionDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-        MyCollectionDetailView(collectionViewModel: MyCollectionViewModel())
+            MyCollectionDetailView(collectionViewModel: MyCollectionViewModel(), addedDateViewModel: AddedDateViewModel())
         }
     }
 }
-
-//struct ImagePicker: UIViewControllerRepresentable {
-//    var sourceType: UIImagePickerController.SourceType = .photoLibrary
-//    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
-//
-//        let imagePicker = UIImagePickerController()
-//        imagePicker.allowsEditing = false
-//        imagePicker.sourceType = sourceType
-//
-//        return imagePicker
-//        }
-//    func updateUIViewController(_ uiViewController: UIViewControllerType, context: UIViewControllerRepresentableContext<ImagePicker>) {
-//        }
-//    }

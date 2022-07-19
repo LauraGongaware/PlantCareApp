@@ -16,6 +16,7 @@ struct MyCollection: Identifiable, Codable {
     var description: String
     var date = Date()
     var id = UUID()
+    var journals: [Journal] = []
     
 }
 

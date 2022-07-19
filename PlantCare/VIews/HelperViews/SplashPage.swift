@@ -16,8 +16,6 @@ struct SplashPage: View {
         ZStack {
             ZStack {
             if self.isActive {
-//                StaticPlantListView()
-//                MyCollectionListView()
                 ContentView()
 
             } else {

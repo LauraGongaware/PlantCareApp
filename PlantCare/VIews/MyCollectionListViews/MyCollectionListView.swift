@@ -20,8 +20,6 @@ struct MyCollectionListView: View {
                 Color("bg").edgesIgnoringSafeArea(.all)
 
                 ScrollView {
-
-                    //Empty View for no entries
                     if viewModel.collectionItems.isEmpty {
                         EmptyCollectionTile()
                             .padding(.top)
@@ -31,7 +29,7 @@ struct MyCollectionListView: View {
                         Section("Plant Collection") {
                             ForEach (viewModel.collectionItems) { collection in
                                 NavigationLink {
-                                    MyCollectionDetailView(collectionItem: collection, collectionViewModel:viewModel)
+                                    MyCollectionDetailView(collectionItem: collection, collectionViewModel:viewModel, addedDateViewModel: AddedDateViewModel())
                                 } label: {
                                     MyCollectionRowView(collectionItem: collection)
                                 }
@@ -46,7 +44,7 @@ struct MyCollectionListView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         NavigationLink {
-                            MyCollectionDetailView(collectionViewModel: viewModel)
+                            MyCollectionDetailView(collectionViewModel: viewModel, addedDateViewModel: AddedDateViewModel())
                         } label: {
                             Image(systemName: "plus")
                                 .foregroundColor(.black)
@@ -55,9 +53,8 @@ struct MyCollectionListView: View {
                 }
                 .onAppear {
                     setupViews()
+                }
             }
-
-        }
         } .navigationViewStyle(.stack)
     }
 

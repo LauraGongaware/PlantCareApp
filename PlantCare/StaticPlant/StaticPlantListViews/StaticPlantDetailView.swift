@@ -19,10 +19,23 @@ struct StaticPlantDetailView: View {
     
     var body: some View {
         
+        
         ZStack {
             Color("bg").edgesIgnoringSafeArea(.all)
+            ZStack(alignment: .topTrailing) {
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        FloatingMenu()
+                            .padding()
+                    }
             VStack {
+                NavigationLink(destination: JournalView()) {
+                  Image(systemName: "note.text")
+                }
+
                 ZStack {
+                    
                     Circle()
                         .foregroundColor(.white)
                         .frame(width: 300, height: 300)
@@ -36,9 +49,8 @@ struct StaticPlantDetailView: View {
                 Text(staticPlantList.scientificName)
                     .font(.subheadline)
                     .italic()
-                
-                WaterDroplets(staticPlantList: staticPlantList.water)
-                Sunlight(staticPlantList: staticPlantList.sunlight)
+                    Waterdrop(staticPlantList: staticPlantList)
+                    Sunshine(staticPlantList: staticPlantList)
                 Text(staticPlantList.description)
                     .multilineTextAlignment(.center)
                     .background(.white)
@@ -54,172 +66,10 @@ struct StaticPlantDetailView: View {
                             .cornerRadius(12)
                         // very top
                         Text("Add to Collection")
-                    }
-                }.frame(width: 200, height: 50)
-            
-            
+                        }
+                    }.frame(width: 200, height: 50)
                 }.padding()
-                
             }.padding()
-        }
-    }
-    
-    
-struct WaterDroplets: View {
-    var water: staticPlantList.water
-    var body: some View {
-        if staticPlantList.water == 1 {
-            HStack {
-                Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-                Image(systemName: "drop")
-                    .foregroundColor(.cyan)
-                Image(systemName: "drop")
-                    .foregroundColor(.cyan)
-                Image(systemName: "drop")
-                    .foregroundColor(.cyan)
-                Image(systemName: "drop")
-                    .foregroundColor(.cyan)
-            }
-        } else if
-            staticPlantList.water == 2 {
-            HStack {
-            Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop")
-                    .foregroundColor(.cyan)
-            }
-        }
-        else if
-            staticPlantList.water == 3 {
-            HStack {
-            Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop")
-                    .foregroundColor(.cyan)
-            }
-        }
-        else if
-            staticPlantList.water == 4 {
-            HStack {
-            Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop")
-                    .foregroundColor(.cyan)
-            }
-        }
-        else if
-            staticPlantList.water == 5 {
-            HStack {
-            Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-            Image(systemName: "drop.fill")
-                    .foregroundColor(.cyan)
-                }
-            }
-        }
-    }
-    
-    struct Sunlight: View {
-    var staticPlantList : Plant
-    var body: some View {
-        if staticPlantList.sunlight == 1 {
-            HStack {
-                Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-                Image(systemName: "sun.max")
-                    .foregroundColor(.yellow)
-                Image(systemName: "sun.max")
-                    .foregroundColor(.yellow)
-                Image(systemName: "sun.max")
-                    .foregroundColor(.yellow)
-                Image(systemName: "sun.max")
-                    .foregroundColor(.yellow)
-            }
-        } else if
-            staticPlantList.sunlight == 2 {
-            HStack {
-            Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max")
-                    .foregroundColor(.yellow)
-            }
-        }
-        else if
-            staticPlantList.sunlight == 3 {
-            HStack {
-            Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max")
-                    .foregroundColor(.yellow)
-            }
-        }
-        else if
-            staticPlantList.sunlight == 4 {
-            HStack {
-            Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max")
-                    .foregroundColor(.yellow)
-            }
-        }
-        else if
-            staticPlantList.sunlight == 5 {
-            HStack {
-            Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-            Image(systemName: "sun.max.fill")
-                    .foregroundColor(.yellow)
-                }
-            }
         }
     }
     func prepareForAddtoCollectionItem(plantName: String? , scientificName: String?, water: Int?, sunlight: Int?, description: String?, toxicity: Bool?, staticImage: String?) {
@@ -239,8 +89,9 @@ struct WaterDroplets: View {
     }
 }
 
-//struct StaticPlantDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        StaticPlantDetailView()
-//    }
-//}
+struct StaticPlantDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        StaticPlantDetailView(staticPlantList: (Plant(plantName: "Monstera", scientificName: "Monstera deliciousa", water: 3, sunlight: 4, description: "Monstera plant", toxicity: true, staticImage: "monstera")), collectionViewModel: StaticCollectionViewModel())
+    }
+}
+ 
