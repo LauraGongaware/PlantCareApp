@@ -8,25 +8,28 @@
 import Foundation
 
 class MyCollectionViewModel: ObservableObject {
-//    @Published var userPlants: [UserPlant] = []
-//    @Published var addToCollection: Bool = false
-//
-//
-    @Published var collectionItems: [MyCollection] = []
+
+    @Published var plantCollection: [Plant] = []
     
-    
-    func createCollectionItem(_ collectionItem: MyCollection) {
-        collectionItems.append(collectionItem)
+    func createCollectionItem(_ userPlant: Plant) {
+        plantCollection.append(userPlant)
         saveToPersistenceStore()
     }
 
-    func update(_ collectionItem: MyCollection, _ plantName: String, _ scientificName: String, _ water: String, _ sunlight: String, _ description: String) {
-        guard let index = collectionItems.firstIndex(of: collectionItem) else { return }
-        collectionItems[index].plantName = plantName
+    func update(_ userPlant: Plant, _ plantName: String, _ scientificName: String, _ water: Int, _ sunlight: Int, _ description: String, _ toxicity: Bool, _ staticImage: String) {
+        guard let index = plantCollection.firstIndex(of: userPlant) else { return }
+        plantCollection[index].plantName = plantName
+        plantCollection[index].scientificName = scientificName
+        plantCollection[index].water = water
+        plantCollection[index].sunlight = sunlight
+        plantCollection[index].description = description
+        plantCollection[index].toxicity = toxicity
+        plantCollection[index].staticImage = staticImage
+        
         saveToPersistenceStore()
     }
     func removeCollectionItem(indexSet: IndexSet) {
-        collectionItems.remove(atOffsets: indexSet)
+        plantCollection.remove(atOffsets: indexSet)
         saveToPersistenceStore()
     }
     
@@ -38,7 +41,7 @@ class MyCollectionViewModel: ObservableObject {
 
     func saveToPersistenceStore() {
         do {
-            let data = try JSONEncoder().encode(collectionItems)
+            let data = try JSONEncoder().encode(plantCollection)
             try data.write(to: createPersistenceStore())
             
         } catch {
@@ -49,7 +52,9 @@ class MyCollectionViewModel: ObservableObject {
     func loadFromPersistenceStore() {
         do {
             let data = try Data(contentsOf: createPersistenceStore())
-            collectionItems = try JSONDecoder().decode([MyCollection].self, from: data)
+            let decoded = try JSONDecoder().decode([Plant].self, from: data)
+            print(decoded)
+            plantCollection = decoded
         }
         catch {
             print("Error decoding")

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StaticPlantListView: View {
     
-   @ObservedObject var viewModel = StaticCollectionViewModel()
+//   @ObservedObject var viewModel = MyCollectionViewModel()
     
     
     var body: some View {
@@ -18,9 +18,9 @@ struct StaticPlantListView: View {
             ZStack {
                 Color("bg").edgesIgnoringSafeArea(.all)
                     List{
-                        ForEach(viewModel.staticPlants) { staticPlant in
+                        ForEach(PlantController.shared.staticPlantList) { staticPlant in
                             NavigationLink {
-                                StaticPlantDetailView(staticPlantList: staticPlant, collectionViewModel: viewModel)
+                                StaticPlantDetailView(staticPlantList: staticPlant)
                             } label : {
                                     Text(staticPlant.plantName)
                                 .navigationTitle(Text("Plants"))

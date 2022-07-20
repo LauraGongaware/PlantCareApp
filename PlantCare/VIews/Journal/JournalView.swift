@@ -12,15 +12,12 @@ struct JournalView: View {
     @ObservedObject var fertilizeViewModel = FertilzeViewModel()
     @ObservedObject var addedDateViewModel =  AddedDateViewModel()
     @ObservedObject var noteViewModel = NoteViewModel()
-//    @ObservedObject var journalviewModel = JournalViewModel()
     
     
     var body: some View {
 ////            Color("bg").edgesIgnoringSafeArea(.all)
 //                    JournalTabBar()
-        
             List {
-
                 Section("Waterings") {
                     ForEach(wateringViewModel.waterings) { watering in
                         Text("Watered on \(watering.date)")

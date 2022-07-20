@@ -23,6 +23,10 @@ struct TabBar: View {
                     .tabItem {
                         Label("Info", systemImage: "info.circle")
                     }
+                InspirationView()
+                    .tabItem {
+                        Label("Inspiration", systemImage: "sun.and.horizon")
+                    }
             } .accentColor(.black)
     }
 }

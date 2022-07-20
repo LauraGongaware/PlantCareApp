@@ -12,6 +12,7 @@ struct PlantCareApp: App {
     var body: some Scene {
         WindowGroup {
             SplashPage()
+                .environmentObject(MyCollectionViewModel())
         }
     }
 }
