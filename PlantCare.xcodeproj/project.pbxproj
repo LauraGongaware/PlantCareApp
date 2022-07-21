@@ -15,7 +15,7 @@
 		D3328AE72885FAC3002E3859 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3328AE62885FAC3002E3859 /* NoteViewModel.swift */; };
 		D3328AE928863CE5002E3859 /* JournalTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3328AE828863CE5002E3859 /* JournalTabBar.swift */; };
 		D3328AEB28866F84002E3859 /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3328AEA28866F84002E3859 /* JournalViewModel.swift */; };
-		D3451BA72887218500FA00CE /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3451BA62887218500FA00CE /* PickerView.swift */; };
+		D344932A2889D919000C19F2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34493292889D919000C19F2 /* ImagePicker.swift */; };
 		D3451BAA2887885100FA00CE /* InspirationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3451BA92887885100FA00CE /* InspirationView.swift */; };
 		D349563B2880FB9E0022D7DD /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D349563A2880FB9E0022D7DD /* InfoView.swift */; };
 		D3537E6828820BBC00D64270 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537E6728820BBC00D64270 /* Date+Ext.swift */; };
@@ -29,6 +29,7 @@
 		D35C90A62884D78700587FE8 /* WaterDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C90A52884D78700587FE8 /* WaterDrop.swift */; };
 		D35C90A82884DCFE00587FE8 /* Sunshine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C90A72884DCFE00587FE8 /* Sunshine.swift */; };
 		D35CA083288878DD00D9FDF2 /* PlantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35CA082288878DD00D9FDF2 /* PlantController.swift */; };
+		D35CA0852888BDEB00D9FDF2 /* Toxicity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35CA0842888BDEB00D9FDF2 /* Toxicity.swift */; };
 		D3A6B96B287CADE500B105E7 /* PlantCareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B96A287CADE500B105E7 /* PlantCareApp.swift */; };
 		D3A6B96D287CADE500B105E7 /* MyCollectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B96C287CADE500B105E7 /* MyCollectionListView.swift */; };
 		D3A6B96F287CADE700B105E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A6B96E287CADE700B105E7 /* Assets.xcassets */; };
@@ -50,7 +51,7 @@
 		D3328AE62885FAC3002E3859 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		D3328AE828863CE5002E3859 /* JournalTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTabBar.swift; sourceTree = "<group>"; };
 		D3328AEA28866F84002E3859 /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
-		D3451BA62887218500FA00CE /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		D34493292889D919000C19F2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		D3451BA92887885100FA00CE /* InspirationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationView.swift; sourceTree = "<group>"; };
 		D349563A2880FB9E0022D7DD /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		D3537E6728820BBC00D64270 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		D35C90A52884D78700587FE8 /* WaterDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDrop.swift; sourceTree = "<group>"; };
 		D35C90A72884DCFE00587FE8 /* Sunshine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sunshine.swift; sourceTree = "<group>"; };
 		D35CA082288878DD00D9FDF2 /* PlantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantController.swift; sourceTree = "<group>"; };
+		D35CA0842888BDEB00D9FDF2 /* Toxicity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toxicity.swift; sourceTree = "<group>"; };
 		D3A6B967287CADE500B105E7 /* PlantCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A6B96A287CADE500B105E7 /* PlantCareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCareApp.swift; sourceTree = "<group>"; };
 		D3A6B96C287CADE500B105E7 /* MyCollectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionListView.swift; sourceTree = "<group>"; };
@@ -111,8 +113,9 @@
 				D35C90A32884CD9B00587FE8 /* FloatingMenu.swift */,
 				D35C90A52884D78700587FE8 /* WaterDrop.swift */,
 				D3A6B97B287CAE4200B105E7 /* SplashPage.swift */,
+				D34493292889D919000C19F2 /* ImagePicker.swift */,
 				D35C90A72884DCFE00587FE8 /* Sunshine.swift */,
-				D3451BA62887218500FA00CE /* PickerView.swift */,
+				D35CA0842888BDEB00D9FDF2 /* Toxicity.swift */,
 			);
 			path = HelperViews;
 			sourceTree = "<group>";
@@ -318,16 +321,17 @@
 				D3537E6828820BBC00D64270 /* Date+Ext.swift in Sources */,
 				D3A6B9C7287E676600B105E7 /* StaticPlantDetailView.swift in Sources */,
 				D35C90A2288478CF00587FE8 /* Note.swift in Sources */,
-				D3451BA72887218500FA00CE /* PickerView.swift in Sources */,
 				D3328ADE2885EFF2002E3859 /* JournalView.swift in Sources */,
 				D35C90A02884789A00587FE8 /* Fertilize.swift in Sources */,
 				D35C90A62884D78700587FE8 /* WaterDrop.swift in Sources */,
 				D3328AE52885F750002E3859 /* AddedDateViewModel.swift in Sources */,
 				D3451BAA2887885100FA00CE /* InspirationView.swift in Sources */,
+				D344932A2889D919000C19F2 /* ImagePicker.swift in Sources */,
 				D349563B2880FB9E0022D7DD /* InfoView.swift in Sources */,
 				D3328ADC2885EF9B002E3859 /* AddedDate.swift in Sources */,
 				D3A6B9C0287E4FF400B105E7 /* Plant.swift in Sources */,
 				D3328AE32885F676002E3859 /* FertilizeViewModel.swift in Sources */,
+				D35CA0852888BDEB00D9FDF2 /* Toxicity.swift in Sources */,
 				D3328AEB28866F84002E3859 /* JournalViewModel.swift in Sources */,
 				D35CA083288878DD00D9FDF2 /* PlantController.swift in Sources */,
 				D35C90A42884CD9B00587FE8 /* FloatingMenu.swift in Sources */,

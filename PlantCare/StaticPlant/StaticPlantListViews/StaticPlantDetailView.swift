@@ -47,14 +47,15 @@ struct StaticPlantDetailView: View {
                     .italic()
                     Waterdrop(staticPlantList: staticPlantList)
                     Sunshine(staticPlantList: staticPlantList)
+                    Toxicity(staticPlantList: staticPlantList)
                 Text(staticPlantList.description)
                     .multilineTextAlignment(.center)
                     .background(.white)
                     .cornerRadius(12)
                 Button {
                     prepareForAddtoCollectionItem(plantName: staticPlantList.plantName, scientificName: staticPlantList.scientificName, water: staticPlantList.water, sunlight: staticPlantList.sunlight, description: staticPlantList.description, toxicity: staticPlantList.toxicity, staticImage: staticPlantList.staticImage)
-                    print(viewModel.plantCollection)
-                    print(viewModel.plantCollection.count)
+//                    print(viewModel.plantCollection)
+//                    print(viewModel.plantCollection.count)
                     dismiss()
 
                 } label: {
@@ -93,4 +94,4 @@ struct StaticPlantDetailView_Previews: PreviewProvider {
         StaticPlantDetailView(staticPlantList: (Plant(plantName: "Monstera", scientificName: "Monstera deliciousa", water: 3, sunlight: 4, description: "Monstera plant", toxicity: true, staticImage: "monstera")))
     }
 }
- 
+

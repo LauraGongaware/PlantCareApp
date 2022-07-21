@@ -18,9 +18,11 @@ struct MyCollectionDetailView: View {
     @State private var water = 0
     @State private var sunlight = 0
     @State private var staticImage: String = ""
-    @State var toxicity = false
+    @State var toxicity: Bool = false
     @State var descriptionText: String = ""
     
+    @State private var isShowPhotoLibrary = false
+    @State private var image = UIImage()
     
     @Environment(\.dismiss) private var dismiss
     
@@ -44,38 +46,60 @@ struct MyCollectionDetailView: View {
                         .foregroundColor(.white)
                         .frame(width: 300, height: 300)
                     
-                    Image("monstera")
+                    Image(staticImage)
                         .resizable()
                         .scaledToFit()
+                    
+                    Image(uiImage: self.image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .edgesIgnoringSafeArea(.all)
+                        .clipShape(Circle())
+                        
+                    Button(action: {
+                        self.isShowPhotoLibrary = true
+                    }) { Image(systemName: "photo")
+                        .font(.system(size: 20))
+                        .foregroundColor(.black)
+                    }
                 }
                 VStack(alignment: .center) {
                     TextField("Plant Name", text: $plantNameText)
+                        .frame(maxWidth: .infinity)
+                        .multilineTextAlignment(.center)
                     TextField("Scientific Name", text: $scientificNameText)
+                        .frame(maxWidth: .infinity)
+                        .multilineTextAlignment(.center)
                     
                     HStack {
-                        Text("Water requirements: \(water)")
+                        Text("Water :")
                         Picker("Sunlight Needs", selection: $sunlight, content: {
                         Text("\(1)").tag(1)
                        Text("\(2)").tag(2)
                        Text("\(3)").tag(3)
                        Text("\(4)").tag(4)
-                       Text("\(5)").tag(5)})}
+                       Text("\(5)").tag(5)})
+                    }
                     
                     HStack {
-                        Text("Sunlight requirements: \(sunlight)")
+                        Text("Sunlight requirements:")
                     Picker("Water Needs", selection: $water, content: {
-                            Text("\(1)").tag(1)
-                           Text("\(2)").tag(2)
-                           Text("\(3)").tag(3)
-                           Text("\(4)").tag(4)
-                           Text("\(5)").tag(5)})
+                            Text("\(1)").tag(0)
+                           Text("\(2)").tag(1)
+                           Text("\(3)").tag(2)
+                           Text("\(4)").tag(3)
+                           Text("\(5)").tag(4)})
                         }
+//                    WaterdropDetail(plantCollection: $water)
                                                 
                     Toggle(isOn: $toxicity, label: {
                         Text("Toxicity -")
                     }).toggleStyle(SafeForPets())
+                    
                     TextEditor(text: $descriptionText)
                 }
+                
                 HStack {
                     Button {
                         if plantCollection == nil {
@@ -97,12 +121,17 @@ struct MyCollectionDetailView: View {
                             // very top
                             Text(plantCollection == nil ? "Save" : "Update")
                         }
-                }.frame(width: 250, height: 55)
-            
+                    }.frame(width: 250, height: 55)
+                    
                 }
             }.padding()
+                .sheet(isPresented: $isShowPhotoLibrary) {
+                    ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
+                    //change from files to camera
+//                    ImagePicker(sourceType: .camera, selectedImage: self.$image)
+                }
             
-            }
+        }
             .onAppear {
                 if let plantCollection = plantCollection {
                     plantNameText = plantCollection.plantName
@@ -112,6 +141,7 @@ struct MyCollectionDetailView: View {
                     toxicity = plantCollection.toxicity
                     staticImage = plantCollection.staticImage
                     descriptionText = plantCollection.description
+                    
         }
     }
         
@@ -147,6 +177,7 @@ struct MyCollectionDetailView: View {
             collectionViewModel.update(plantCollection, plantName, scientificName, water, sunlight, description, toxicity, staticImage)
         }
     }
+    
 }
 
 struct MyCollectionDetailView_Previews: PreviewProvider {
@@ -172,3 +203,81 @@ struct SafeForPets: ToggleStyle {
         }
     }
 }
+
+//struct WaterdropDetail: View {
+//    var body: some View {
+//        if $water == 1 {
+//                    HStack {
+//                        Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                        Image(systemName: "drop")
+//                            .foregroundColor(.cyan)
+//                        Image(systemName: "drop")
+//                            .foregroundColor(.cyan)
+//                        Image(systemName: "drop")
+//                            .foregroundColor(.cyan)
+//                        Image(systemName: "drop")
+//                            .foregroundColor(.cyan)
+//                    }
+//                } else if
+//                    plantCollection.water == 2 {
+//                    HStack {
+//                    Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop")
+//                            .foregroundColor(.cyan)
+//                    }
+//                }
+//                else if
+//                    plantCollection.water == 3 {
+//                    HStack {
+//                    Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop")
+//                            .foregroundColor(.cyan)
+//                    }
+//                }
+//                else if
+//                    plantCollection.water == 4 {
+//                    HStack {
+//                    Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop")
+//                            .foregroundColor(.cyan)
+//                    }
+//                }
+//                else if
+//                    plantCollection.water == 5 {
+//                    HStack {
+//                    Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                    Image(systemName: "drop.fill")
+//                            .foregroundColor(.cyan)
+//                        }
+//                    }
+//                }
+//            }

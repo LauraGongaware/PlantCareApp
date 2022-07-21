@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StaticPlantListView: View {
     
-//   @ObservedObject var viewModel = MyCollectionViewModel()
+   @ObservedObject var viewModel = MyCollectionViewModel()
     
     
     var body: some View {
@@ -23,7 +23,8 @@ struct StaticPlantListView: View {
                                 StaticPlantDetailView(staticPlantList: staticPlant)
                             } label : {
                                     Text(staticPlant.plantName)
-                                .navigationTitle(Text("Plants"))
+                                .navigationTitle(Text("Available Plants List"))
+                                .navigationBarTitle("Plants", displayMode: .inline)
                             }
                         }
                     }.cornerRadius(12)

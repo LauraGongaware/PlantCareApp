@@ -10,6 +10,7 @@ import Foundation
 class MyCollectionViewModel: ObservableObject {
 
     @Published var plantCollection: [Plant] = []
+   
     
     func createCollectionItem(_ userPlant: Plant) {
         plantCollection.append(userPlant)

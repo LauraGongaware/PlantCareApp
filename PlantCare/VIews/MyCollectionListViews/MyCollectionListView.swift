@@ -11,8 +11,8 @@ struct MyCollectionListView: View {
     
     @EnvironmentObject var viewModel: MyCollectionViewModel
     
-    @State var navigateTo: AnyView?
-    @State var isNaviationActive = false
+//    @State var navigateTo: AnyView?
+//    @State var isNaviationActive = false
     
     var body: some View {
         NavigationView {
@@ -20,11 +20,6 @@ struct MyCollectionListView: View {
                 Color("bg").edgesIgnoringSafeArea(.all)
 
                 ScrollView {
-//                    if viewModel.plantCollection.isEmpty {
-//                        EmptyCollectionTile()
-//                            .padding(.top)
-//                        } else {
-
                     List {
                             ForEach (viewModel.plantCollection) { collection in
                                 NavigationLink {
@@ -41,6 +36,7 @@ struct MyCollectionListView: View {
 //                }
             }
                 .navigationTitle("My Plants")
+                .navigationBarTitle("Plants", displayMode: .inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         NavigationLink {
@@ -59,6 +55,7 @@ struct MyCollectionListView: View {
             }
         } .navigationViewStyle(.stack)
     }
+        
 
     func setupViews() {
         viewModel.loadFromPersistenceStore()
@@ -68,6 +65,7 @@ struct MyCollectionListView: View {
 struct MyCollectionListView_Previews: PreviewProvider {
     static var previews: some View {
         MyCollectionListView()
+            .environmentObject(MyCollectionViewModel())
     }
 }
 
