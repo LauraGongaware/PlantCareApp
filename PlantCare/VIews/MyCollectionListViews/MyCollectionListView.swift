@@ -11,29 +11,29 @@ struct MyCollectionListView: View {
     
     @EnvironmentObject var viewModel: MyCollectionViewModel
     
-//    @State var navigateTo: AnyView?
-//    @State var isNaviationActive = false
+    @State var navigateTo: AnyView?
+    @State var currentCollection: [Plant] = []
+    @State var isNaviationActive = false
     
     var body: some View {
         NavigationView {
             ZStack {
                 Color("bg").edgesIgnoringSafeArea(.all)
-
                 ScrollView {
                     List {
-                            ForEach (viewModel.plantCollection) { collection in
-                                NavigationLink {
-                                    MyCollectionDetailView(plantCollection: collection)
-                                                           
-//    journalViewModel: JournalViewModel(), addedDateViewModel: AddedDateViewModel())
+                        ForEach (currentCollection) { collection in
+                            NavigationLink {
+                                MyCollectionDetailView(plantCollection: collection)
                                 } label: {
-                                    MyCollectionRowView(collectionItem: collection)
-                                }
-                            } .onDelete(perform: viewModel.removeCollectionItem(indexSet:))
-                    }
+                                MyCollectionRowView(collectionItem: collection)
+                            }
+                        } .onDelete(perform: viewModel.removeCollectionItem(indexSet:))
+                    }.onAppear(perform: setupViews)
                     .frame(height: CGFloat(viewModel.plantCollection.count) * 115 + 25)
                     .listStyle(.plain)
-//                }
+                    .onReceive(viewModel.$plantCollection) { plants in
+                        self.currentCollection = plants
+                    }
             }
                 .navigationTitle("My Plants")
                 .navigationBarTitle("Plants", displayMode: .inline)
@@ -41,22 +41,18 @@ struct MyCollectionListView: View {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         NavigationLink {
                             MyCollectionDetailView()
-                                                   
-//                                                   journalViewModel: JournalViewModel(), addedDateViewModel: AddedDateViewModel())
                         } label: {
                             Image(systemName: "plus")
                                 .foregroundColor(.black)
                         }
                     }
                 }
-                .onAppear {
-                    setupViews()
-                }
             }
         } .navigationViewStyle(.stack)
-    }
         
-
+        
+    }
+    
     func setupViews() {
         viewModel.loadFromPersistenceStore()
     }

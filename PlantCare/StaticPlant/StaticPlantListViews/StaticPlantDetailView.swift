@@ -23,13 +23,13 @@ struct StaticPlantDetailView: View {
                         Rectangle()
                             .foregroundColor(.clear)
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        FloatingMenu()
+//                        FloatingMenu()
                             .padding()
                     }
             VStack {
-                NavigationLink(destination: JournalView()) {
-                  Image(systemName: "note.text")
-                }
+//                NavigationLink(destination: JournalView()) {
+//                  Image(systemName: "note.text")
+//                }
                 ZStack {
                     
                     Circle()
@@ -54,8 +54,6 @@ struct StaticPlantDetailView: View {
                     .cornerRadius(12)
                 Button {
                     prepareForAddtoCollectionItem(plantName: staticPlantList.plantName, scientificName: staticPlantList.scientificName, water: staticPlantList.water, sunlight: staticPlantList.sunlight, description: staticPlantList.description, toxicity: staticPlantList.toxicity, staticImage: staticPlantList.staticImage)
-//                    print(viewModel.plantCollection)
-//                    print(viewModel.plantCollection.count)
                     dismiss()
 
                 } label: {
