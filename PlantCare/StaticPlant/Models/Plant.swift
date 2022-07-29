@@ -18,12 +18,13 @@ struct Plant: Identifiable, Codable, Equatable {
     var description: String
     var toxicity: Bool
     var staticImage: String
-    var dateAdded = Date()
+    var image: Data?
+    var date = Date()
     var id = UUID()
     var journals: [Journal] = []
     var isCollectionPlant = false
     var userCreated = false
-    
+//    
 //    init(plantName: String, scientificName: String, water: Int, sunlight: Int, description: String, toxicity: Bool, staticImage: String) {
 //        self.plantName = plantName
 //        self.scientificName = scientificName

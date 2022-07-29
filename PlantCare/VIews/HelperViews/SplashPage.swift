@@ -20,12 +20,12 @@ struct SplashPage: View {
 
             } else {
                 Color("bg").edgesIgnoringSafeArea(.all)
-                Image("splash")
+                Image("SplashPage")
                     .resizable()
-                    .frame(width: 300, height: 300, alignment: .center)
-                Text("Flourishing simplified")
-                    .font(Font.largeTitle)
-                    .foregroundColor(Color.white)
+                    .frame(width: 350, height: 350, alignment: .center)
+//                Text("Flourishing simplified")
+//                    .font(Font.largeTitle)
+//                    .foregroundColor(Color.white)
 
                 }
             }

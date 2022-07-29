@@ -48,10 +48,13 @@ struct StaticPlantDetailView: View {
                     Waterdrop(staticPlantList: staticPlantList)
                     Sunshine(staticPlantList: staticPlantList)
                     Toxicity(staticPlantList: staticPlantList)
-                Text(staticPlantList.description)
+                    ScrollView{
+                    Text(staticPlantList.description)
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     .multilineTextAlignment(.center)
                     .background(.white)
                     .cornerRadius(12)
+                    }
                 Button {
                     prepareForAddtoCollectionItem(plantName: staticPlantList.plantName, scientificName: staticPlantList.scientificName, water: staticPlantList.water, sunlight: staticPlantList.sunlight, description: staticPlantList.description, toxicity: staticPlantList.toxicity, staticImage: staticPlantList.staticImage)
                     dismiss()
