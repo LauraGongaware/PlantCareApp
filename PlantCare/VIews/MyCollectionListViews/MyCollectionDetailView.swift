@@ -48,7 +48,7 @@ struct MyCollectionDetailView: View {
                         .foregroundColor(.white)
                         .frame(width: 300, height: 300)
                     
-                    if let image = collectionViewModel.image {
+                        if let image = ImageStorage.shared.loadImageFromDocumentDirectory(nameOfImage: plantCollection?.plantName ?? "") {
                         Image(uiImage: image)
                             .resizable()
                             .scaledToFit()
@@ -150,12 +150,11 @@ struct MyCollectionDetailView: View {
                     Button {
                         if plantCollection == nil {
                             prepareForCreateCollectionItem(plantName: plantNameText, scientificName: scientificNameText, water: water, sunlight: sunlight, description: descriptionText, staticImage: staticImage, toxicity: toxicity, date: date)
-                            collectionViewModel.saveToPhoto()
-//                            collectionViewModel.SaveImage()
+        
                         
                         } else {
                             prepareForUpdateCollectionItem()
-                            collectionViewModel.saveToPhoto()
+        
                         }
                         dismiss()
                         
@@ -179,9 +178,9 @@ struct MyCollectionDetailView: View {
             .padding()
             .cornerRadius(15)
             .sheet(isPresented: $isShowPhotoLibrary) {
-                ImagePicker(sourceType: .photoLibrary, selectedImage: $collectionViewModel.image)
+                ImagePicker(selectedPlant: plantCollection, sourceType: .photoLibrary, selectedImage: $collectionViewModel.image)
                 //change from files to camera
-                //                    ImagePicker(sourceType: .camera, selectedImage: self.$image)
+                //         ImagePicker(sourceType: .camera, selectedImage: self.$image)
                 
             }
             
@@ -282,12 +281,10 @@ struct MyCollectionDetailView: View {
                     staticImage = plantCollection.staticImage
                     descriptionText = plantCollection.description
                     date = plantCollection.date
-//                    image = plantCollection.image
             }
         }
         .onDisappear {
             collectionViewModel.loadFromPersistenceStore()
-            collectionViewModel.loadPhoto()
     }
 }
     func prepareForCreateCollectionItem(plantName: String?, scientificName: String?, water: Int?, sunlight: Int?, description: String?, staticImage: String?, toxicity: Bool?, date: Date?) {
@@ -297,8 +294,8 @@ struct MyCollectionDetailView: View {
         let sunlight = sunlight,
         let description = description, !description.isEmpty,
         let staticImage = staticImage,
-        let toxicity = toxicity,
-        let date = date
+        let toxicity = toxicity
+//        let date = date
         else { return }
       
         let collectionItem = Plant(plantName: plantName, scientificName: scientificName, water: water, sunlight: sunlight, description: description, toxicity: toxicity, staticImage: staticImage)

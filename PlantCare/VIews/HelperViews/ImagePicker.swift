@@ -9,6 +9,7 @@ import UIKit
 import SwiftUI
 
 struct ImagePicker: UIViewControllerRepresentable {
+    var selectedPlant: Plant?
     var sourceType: UIImagePickerController.SourceType = .photoLibrary
     
     @Binding var selectedImage: UIImage?
@@ -37,6 +38,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
                 parent.selectedImage = image
+                ImageStorage.shared.saveImageToDocumentDirectory(image: image, imageName: parent.selectedPlant?.plantName ?? "") 
             }
             parent.presentationMode.wrappedValue.dismiss()
         }

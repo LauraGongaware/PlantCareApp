@@ -8,13 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D33003C328908254003D4D7E /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33003C228908254003D4D7E /* NotificationManager.swift */; };
-		D3328ADC2885EF9B002E3859 /* AddedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3328ADB2885EF9B002E3859 /* AddedDate.swift */; };
-		D3328ADE2885EFF2002E3859 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3328ADD2885EFF2002E3859 /* JournalView.swift */; };
-		D3328AE12885F1AB002E3859 /* WateringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3328AE02885F1AB002E3859 /* WateringViewModel.swift */; };
-		D3328AE32885F676002E3859 /* FertilizeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3328AE22885F676002E3859 /* FertilizeViewModel.swift */; };
-		D3328AE52885F750002E3859 /* AddedDateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3328AE42885F750002E3859 /* AddedDateViewModel.swift */; };
-		D3328AE72885FAC3002E3859 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3328AE62885FAC3002E3859 /* NoteViewModel.swift */; };
-		D3328AEB28866F84002E3859 /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3328AEA28866F84002E3859 /* JournalViewModel.swift */; };
 		D3422A75288F7F72008B0222 /* UnsplashData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3422A74288F7F72008B0222 /* UnsplashData.swift */; };
 		D3422A77288F7F93008B0222 /* FetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3422A76288F7F93008B0222 /* FetchImage.swift */; };
 		D3422A79288F7FF4008B0222 /* UnplashSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3422A78288F7FF4008B0222 /* UnplashSwiftUI.swift */; };
@@ -25,15 +18,12 @@
 		D3537E6828820BBC00D64270 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537E6728820BBC00D64270 /* Date+Ext.swift */; };
 		D3537E7028825C6500D64270 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537E6F28825C6500D64270 /* TabBar.swift */; };
 		D3537E722882875300D64270 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537E712882875300D64270 /* ContentView.swift */; };
-		D35C909C2884776800587FE8 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C909B2884776800587FE8 /* Journal.swift */; };
-		D35C909E2884785000587FE8 /* Watering.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C909D2884785000587FE8 /* Watering.swift */; };
-		D35C90A02884789A00587FE8 /* Fertilize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C909F2884789A00587FE8 /* Fertilize.swift */; };
-		D35C90A2288478CF00587FE8 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C90A1288478CF00587FE8 /* Note.swift */; };
 		D35C90A42884CD9B00587FE8 /* FloatingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C90A32884CD9B00587FE8 /* FloatingMenu.swift */; };
 		D35C90A62884D78700587FE8 /* WaterDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C90A52884D78700587FE8 /* WaterDrop.swift */; };
 		D35C90A82884DCFE00587FE8 /* Sunshine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C90A72884DCFE00587FE8 /* Sunshine.swift */; };
 		D35CA083288878DD00D9FDF2 /* PlantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35CA082288878DD00D9FDF2 /* PlantController.swift */; };
 		D35CA0852888BDEB00D9FDF2 /* Toxicity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35CA0842888BDEB00D9FDF2 /* Toxicity.swift */; };
+		D35DFF5D289480E500A77C51 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35DFF5C289480E500A77C51 /* ImageStorage.swift */; };
 		D3A6B96B287CADE500B105E7 /* PlantCareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B96A287CADE500B105E7 /* PlantCareApp.swift */; };
 		D3A6B96D287CADE500B105E7 /* MyCollectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B96C287CADE500B105E7 /* MyCollectionListView.swift */; };
 		D3A6B96F287CADE700B105E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A6B96E287CADE700B105E7 /* Assets.xcassets */; };
@@ -48,13 +38,6 @@
 
 /* Begin PBXFileReference section */
 		D33003C228908254003D4D7E /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		D3328ADB2885EF9B002E3859 /* AddedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedDate.swift; sourceTree = "<group>"; };
-		D3328ADD2885EFF2002E3859 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
-		D3328AE02885F1AB002E3859 /* WateringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WateringViewModel.swift; sourceTree = "<group>"; };
-		D3328AE22885F676002E3859 /* FertilizeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FertilizeViewModel.swift; sourceTree = "<group>"; };
-		D3328AE42885F750002E3859 /* AddedDateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedDateViewModel.swift; sourceTree = "<group>"; };
-		D3328AE62885FAC3002E3859 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
-		D3328AEA28866F84002E3859 /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
 		D3422A74288F7F72008B0222 /* UnsplashData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashData.swift; sourceTree = "<group>"; };
 		D3422A76288F7F93008B0222 /* FetchImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImage.swift; sourceTree = "<group>"; };
 		D3422A78288F7FF4008B0222 /* UnplashSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnplashSwiftUI.swift; sourceTree = "<group>"; };
@@ -65,15 +48,12 @@
 		D3537E6728820BBC00D64270 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		D3537E6F28825C6500D64270 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		D3537E712882875300D64270 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D35C909B2884776800587FE8 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
-		D35C909D2884785000587FE8 /* Watering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watering.swift; sourceTree = "<group>"; };
-		D35C909F2884789A00587FE8 /* Fertilize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fertilize.swift; sourceTree = "<group>"; };
-		D35C90A1288478CF00587FE8 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D35C90A32884CD9B00587FE8 /* FloatingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingMenu.swift; sourceTree = "<group>"; };
 		D35C90A52884D78700587FE8 /* WaterDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDrop.swift; sourceTree = "<group>"; };
 		D35C90A72884DCFE00587FE8 /* Sunshine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sunshine.swift; sourceTree = "<group>"; };
 		D35CA082288878DD00D9FDF2 /* PlantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantController.swift; sourceTree = "<group>"; };
 		D35CA0842888BDEB00D9FDF2 /* Toxicity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toxicity.swift; sourceTree = "<group>"; };
+		D35DFF5C289480E500A77C51 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
 		D3A6B967287CADE500B105E7 /* PlantCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A6B96A287CADE500B105E7 /* PlantCareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCareApp.swift; sourceTree = "<group>"; };
 		D3A6B96C287CADE500B105E7 /* MyCollectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionListView.swift; sourceTree = "<group>"; };
@@ -105,19 +85,6 @@
 				D33003C228908254003D4D7E /* NotificationManager.swift */,
 			);
 			path = WateringNotification;
-			sourceTree = "<group>";
-		};
-		D3328ADF2885F17F002E3859 /* Journal */ = {
-			isa = PBXGroup;
-			children = (
-				D3328ADD2885EFF2002E3859 /* JournalView.swift */,
-				D3328AE02885F1AB002E3859 /* WateringViewModel.swift */,
-				D3328AE62885FAC3002E3859 /* NoteViewModel.swift */,
-				D3328AE22885F676002E3859 /* FertilizeViewModel.swift */,
-				D3328AE42885F750002E3859 /* AddedDateViewModel.swift */,
-				D3328AEA28866F84002E3859 /* JournalViewModel.swift */,
-			);
-			path = Journal;
 			sourceTree = "<group>";
 		};
 		D3328AEC28867B5A002E3859 /* HelperViews */ = {
@@ -161,11 +128,6 @@
 			children = (
 				D35CA081288878CD00D9FDF2 /* ModelControllers */,
 				D3A6B9BF287E4FF400B105E7 /* Plant.swift */,
-				D35C909B2884776800587FE8 /* Journal.swift */,
-				D35C909D2884785000587FE8 /* Watering.swift */,
-				D35C909F2884789A00587FE8 /* Fertilize.swift */,
-				D35C90A1288478CF00587FE8 /* Note.swift */,
-				D3328ADB2885EF9B002E3859 /* AddedDate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,7 +184,6 @@
 				D3451BA82887881D00FA00CE /* InspirationView */,
 				D3328AEC28867B5A002E3859 /* HelperViews */,
 				D3A6B9BC287E2CE100B105E7 /* MyCollectionListViews */,
-				D3328ADF2885F17F002E3859 /* Journal */,
 				D349563A2880FB9E0022D7DD /* InfoView.swift */,
 			);
 			path = VIews;
@@ -251,6 +212,7 @@
 				D3A6B9B8287E0BB000B105E7 /* MyCollectionViewModel.swift */,
 				D3A6B96C287CADE500B105E7 /* MyCollectionListView.swift */,
 				D3A6B9D0287F945400B105E7 /* MyCollectionDetailView.swift */,
+				D35DFF5C289480E500A77C51 /* ImageStorage.swift */,
 			);
 			path = MyCollectionListViews;
 			sourceTree = "<group>";
@@ -335,37 +297,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3422A75288F7F72008B0222 /* UnsplashData.swift in Sources */,
-				D3328AE12885F1AB002E3859 /* WateringViewModel.swift in Sources */,
 				D3A6B96D287CADE500B105E7 /* MyCollectionListView.swift in Sources */,
+				D35DFF5D289480E500A77C51 /* ImageStorage.swift in Sources */,
 				D3422A77288F7F93008B0222 /* FetchImage.swift in Sources */,
 				D3A6B9D1287F945400B105E7 /* MyCollectionDetailView.swift in Sources */,
 				D3537E6828820BBC00D64270 /* Date+Ext.swift in Sources */,
 				D3A6B9C7287E676600B105E7 /* StaticPlantDetailView.swift in Sources */,
-				D35C90A2288478CF00587FE8 /* Note.swift in Sources */,
-				D3328ADE2885EFF2002E3859 /* JournalView.swift in Sources */,
-				D35C90A02884789A00587FE8 /* Fertilize.swift in Sources */,
 				D35C90A62884D78700587FE8 /* WaterDrop.swift in Sources */,
-				D3328AE52885F750002E3859 /* AddedDateViewModel.swift in Sources */,
 				D3451BAA2887885100FA00CE /* InspirationView.swift in Sources */,
 				D344932A2889D919000C19F2 /* ImagePicker.swift in Sources */,
 				D349563B2880FB9E0022D7DD /* InfoView.swift in Sources */,
 				D3422A79288F7FF4008B0222 /* UnplashSwiftUI.swift in Sources */,
-				D3328ADC2885EF9B002E3859 /* AddedDate.swift in Sources */,
 				D3A6B9C0287E4FF400B105E7 /* Plant.swift in Sources */,
 				D343C07C288A0DBE00959660 /* Camera.swift in Sources */,
-				D3328AE32885F676002E3859 /* FertilizeViewModel.swift in Sources */,
 				D35CA0852888BDEB00D9FDF2 /* Toxicity.swift in Sources */,
-				D3328AEB28866F84002E3859 /* JournalViewModel.swift in Sources */,
 				D35CA083288878DD00D9FDF2 /* PlantController.swift in Sources */,
 				D35C90A42884CD9B00587FE8 /* FloatingMenu.swift in Sources */,
 				D3537E7028825C6500D64270 /* TabBar.swift in Sources */,
 				D3A6B97C287CAE4200B105E7 /* SplashPage.swift in Sources */,
 				D3537E722882875300D64270 /* ContentView.swift in Sources */,
 				D35C90A82884DCFE00587FE8 /* Sunshine.swift in Sources */,
-				D3328AE72885FAC3002E3859 /* NoteViewModel.swift in Sources */,
 				D33003C328908254003D4D7E /* NotificationManager.swift in Sources */,
-				D35C909E2884785000587FE8 /* Watering.swift in Sources */,
-				D35C909C2884776800587FE8 /* Journal.swift in Sources */,
 				D3A6B9C3287E661D00B105E7 /* StaticPlantListView.swift in Sources */,
 				D3A6B9B9287E0BB000B105E7 /* MyCollectionViewModel.swift in Sources */,
 				D3A6B96B287CADE500B105E7 /* PlantCareApp.swift in Sources */,

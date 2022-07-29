@@ -13,12 +13,12 @@ import Combine
 class MyCollectionViewModel: ObservableObject {
 
     @Published var plantCollection: [Plant] = []
-    @Published var selectedPlant: Plant?
+//    @Published var selectedPlant: Plant?
     @Published var image: UIImage?
     @State var fileURL: URL?
-    
-    private var imageSubscription: AnyCancellable?
-    
+//
+//    private var imageSubscription: AnyCancellable?
+//
 //    private var saveFileURL: URL? {
 //        try? FileManager.default.url(
 //            for: .documentDirectory,
@@ -62,7 +62,7 @@ class MyCollectionViewModel: ObservableObject {
         guard let index = plantCollection.firstIndex(of: userPlant) else { return }
         plantCollection.remove(at: index)
         
-        let plant = Plant(plantName: plantName, scientificName: scientificName, water: water, sunlight: sunlight, description: description, toxicity: toxicity, staticImage: staticImage, date: date)
+        let plant = Plant(plantName: plantName, scientificName: scientificName, water: water, sunlight: sunlight, description: description, toxicity: toxicity, staticImage: staticImage)
         plantCollection.insert(plant, at: index)
         saveToPersistenceStore()
     }
@@ -98,48 +98,48 @@ class MyCollectionViewModel: ObservableObject {
             print("Error decoding")
         }
     }
-
+}
     
     
-    func createPhotoPersistenceStore() -> URL {
-        let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let fileURL = url[0].appendingPathComponent("images.json")
-        return fileURL
-    }
-
-    func saveToPhoto() {
-        do {
-            let furl = try FileManager.default
-                .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-                .appendingPathComponent("imageFile")
-                .appendingPathExtension("png")
-            fileURL = furl
-            try image?.pngData()?.write(to: furl)
-        } catch {
-            print("could not create imageFile")
-        }
-//        do {
-//            let data = try image?.pngData()
-//            try data?.write(to: createPhotoPersistenceStore())
+//    func createPhotoPersistenceStore() -> URL {
+//        let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+//        let fileURL = url[0].appendingPathComponent("images.json")
+//        return fileURL
+//    }
 //
+//    func saveToPhoto() {
+//        do {
+//            let furl = try FileManager.default
+//                .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+//                .appendingPathComponent("imageFile")
+//                .appendingPathExtension("png")
+//            fileURL = furl
+//            try image?.pngData()?.write(to: furl)
 //        } catch {
-//            print("Error encoding.")
+//            print("could not create imageFile")
 //        }
-
-    }
-    
-    func loadPhoto() -> UIImage {
-        do{
-            if let furl = fileURL {
-                let data = try Data(contentsOf: furl)
-                if let image = UIImage(data: data) {
-                    return image
-                }
-            }
-        } catch {
-            print("error: \(error)")
-        }
-        return UIImage()
+////        do {
+////            let data = try image?.pngData()
+////            try data?.write(to: createPhotoPersistenceStore())
+////
+////        } catch {
+////            print("Error encoding.")
+////        }
+//
+//    }
+//    
+//    func loadPhoto() -> UIImage {
+//        do{
+//            if let furl = fileURL {
+//                let data = try Data(contentsOf: furl)
+//                if let image = UIImage(data: data) {
+//                    return image
+//                }
+//            }
+//        } catch {
+//            print("error: \(error)")
+//        }
+//        return UIImage()
 //        do {
 //            let data = try Data(contentsOf: createPhotoPersistenceStore())
 //            let decoded = try JSONDecoder().decode([Plant].self, from: data)
@@ -149,8 +149,8 @@ class MyCollectionViewModel: ObservableObject {
 //        catch {
 //            print("Error decoding")
 //        }
-    }
-}
+//    }
+//}
 
 //    func loadImage() {
 //        if let saveFileURL = saveFileURL,

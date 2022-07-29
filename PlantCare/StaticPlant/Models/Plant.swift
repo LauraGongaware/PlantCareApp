@@ -18,22 +18,22 @@ struct Plant: Identifiable, Codable, Equatable {
     var description: String
     var toxicity: Bool
     var staticImage: String
-    var image: Data?
+    var imageRef: String
     var date = Date()
     var id = UUID()
-    var journals: [Journal] = []
     var isCollectionPlant = false
     var userCreated = false
-//    
-//    init(plantName: String, scientificName: String, water: Int, sunlight: Int, description: String, toxicity: Bool, staticImage: String) {
-//        self.plantName = plantName
-//        self.scientificName = scientificName
-//        self.water = water
-//        self.sunlight = sunlight
-//        self.description = description
-//        self.toxicity = toxicity
-//        self.staticImage = staticImage
-//    }
+    
+    init(plantName: String, scientificName: String, water: Int, sunlight: Int, description: String, toxicity: Bool, staticImage: String) {
+        self.plantName = plantName
+        self.scientificName = scientificName
+        self.water = water
+        self.sunlight = sunlight
+        self.description = description
+        self.toxicity = toxicity
+        self.staticImage = staticImage
+        self.imageRef = plantName
+    }
 
     static func == (lhs: Plant, rhs: Plant) -> Bool {
       lhs.id == rhs.id

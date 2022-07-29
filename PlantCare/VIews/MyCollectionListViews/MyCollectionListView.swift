@@ -55,7 +55,6 @@ struct MyCollectionListView: View {
     
     func setupViews() {
         viewModel.loadFromPersistenceStore()
-        viewModel.loadPhoto()
     }
 }
 
