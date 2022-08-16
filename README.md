@@ -1,5 +1,5 @@
 # Simply Flourishing
-<p align="center"><img src= "https://imgur.com/OcR0tm7" width=25% height=25%></p>
+<p align="center"><img src= "https://user-images.githubusercontent.com/107269254/184980606-bf030f28-1f69-41f9-8c10-e5a377fbabd9.gif" width=25% height=25%></p>
 Simply Flourishing is a simple houseplant management app that allows users to create and add plants to their collection.
 
 **Tech Stack:**
