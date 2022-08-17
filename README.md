@@ -16,4 +16,4 @@ Simply Flourishing is a simple houseplant management app that allows users to cr
 - Learn how to deal with common houseplant pests
 - Browse aesthetically pleasing houseplant images
 
-<img src= "https://media.giphy.com/media/jAwFExWMXuprNBBWCF/giphy.gif" width=25% height=25%>
+<p align="center"><img src= "https://media.giphy.com/media/jAwFExWMXuprNBBWCF/giphy.gif" width=25% height=25%></p>
