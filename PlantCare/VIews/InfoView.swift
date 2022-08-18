@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct InfoView: View {
+    @State var isShowAttribution = false
+    
     var body: some View {
     ZStack {
             Color("bg").edgesIgnoringSafeArea(.all)
         ZStack {
                 Rectangle()
                     .foregroundColor(.white)
-            ScrollView {
+//            ScrollView {
             ZStack {
                 VStack(alignment: .center) {
-                    Text("**Resources and Information**")
+                    Text("**Additional Info**")
                         .font(.title)
                         .padding()
                 Group {
@@ -25,7 +27,7 @@ struct InfoView: View {
                         .font(.headline)
                         .underline()
                         Text("Houseplant pests are an annoying problem that many plant owners encounter. Here are some tips and recommendations for common houseplant pests.")
-                }
+                }.padding()
                 VStack(alignment: .leading) {
                         Text("**Spider Mites**")
                             .font(.subheadline)
@@ -59,29 +61,41 @@ struct InfoView: View {
                             .clipShape(Circle())
                     }
                 }.padding()
-                Group {
-                    Text("Image Attribution")
-                            .underline()
+                    
+                    Button(action: {
+                        self.isShowAttribution = true
+                    }) { Text("Image Attribution")
+//                            .underline()
                             .font(.headline)
                             .padding(.bottom)
+                    } .sheet(isPresented: $isShowAttribution, content: {
+                        VStack(alignment: .leading) {
+                    
                     Text("Images for monstera, fiddleleaf fig, snake plant, spider plant, pothos and alocasia created by Freepik at https://www.freepik.com/)")
                             .font(.footnote)
+                            .padding(.bottom)
                     Text("Images for prayer plant, string of pearls, dieffenbachia, and arrowhead plant created by Rawpixel at (https://www.freepik.com/)")
                         .font(.footnote)
+                        .padding(.bottom)
                     Text("Images for succulent, cactus, pilea and peacelily created by Pikisuperstar at (https://www.freepik.com/)")
                         .font(.footnote)
+                        .padding(.bottom)
                     Text("Images for calathea, African violet and orchid created by Upklayak at (https://www.freepik.com/)")
                         .font(.footnote)
+                        .padding(.bottom)
                     Text("Image for philodendron by pch.vector at (https://www.freepik.com/)")
                         .font(.footnote)
+                        .padding(.bottom)
                     Text("Image for ZZ plant from (https://www.article.com/blog/wp-content/uploads/2020/01/Plant-Spot-Illustration-ZZPlant.jpg)")
                         .font(.footnote)
+                        .padding(.bottom)
                     Text("Image for mealybugs from feey on Unsplash (https://unsplash.com/s/photos/mealy-bugs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
                         .font(.footnote)
-                                }
+                        }.padding()
+                    })
                             }
                         }
-                    }
+//                    }
                 }
             }
         }

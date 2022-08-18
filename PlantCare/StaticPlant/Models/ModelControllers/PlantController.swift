@@ -55,7 +55,4 @@ class PlantController {
         Plant(plantName: "Arrowhead Plant", scientificName: "Syngonium podophyllum", water: 4, sunlight: 3, description: "Arrowhead plants or syngonium are plants native to Central and South America. Arrowhead plants produce attractive foliage and can be trained to climb trellis. Place them in low to medium light locations and water when the soil surface begins to feel dry.", toxicity: true, staticImage: "arrowheadplant")
 
         ]
-    
-    
-    
 }

@@ -13,7 +13,7 @@ struct MyCollectionListView: View {
     
     @State var navigateTo: AnyView?
     @State var currentCollection: [Plant] = []
-    @State var isNaviationActive = false
+    @State var isNavigationActive = false
     
     var body: some View {
         NavigationView {
