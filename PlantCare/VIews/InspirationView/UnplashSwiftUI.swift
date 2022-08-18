@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 public struct UnsplashRandom: View {
     
     //MARK: Parameters

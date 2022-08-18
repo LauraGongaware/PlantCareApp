@@ -126,6 +126,7 @@
 		D34956392880EBA80022D7DD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D35DFF5C289480E500A77C51 /* ImageStorage.swift */,
 				D35CA081288878CD00D9FDF2 /* ModelControllers */,
 				D3A6B9BF287E4FF400B105E7 /* Plant.swift */,
 			);
@@ -180,11 +181,11 @@
 		D3A6B978287CAE0600B105E7 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				D349563A2880FB9E0022D7DD /* InfoView.swift */,
 				D33003C128908236003D4D7E /* WateringNotification */,
 				D3451BA82887881D00FA00CE /* InspirationView */,
 				D3328AEC28867B5A002E3859 /* HelperViews */,
 				D3A6B9BC287E2CE100B105E7 /* MyCollectionListViews */,
-				D349563A2880FB9E0022D7DD /* InfoView.swift */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -212,7 +213,6 @@
 				D3A6B9B8287E0BB000B105E7 /* MyCollectionViewModel.swift */,
 				D3A6B96C287CADE500B105E7 /* MyCollectionListView.swift */,
 				D3A6B9D0287F945400B105E7 /* MyCollectionDetailView.swift */,
-				D35DFF5C289480E500A77C51 /* ImageStorage.swift */,
 			);
 			path = MyCollectionListViews;
 			sourceTree = "<group>";
@@ -454,6 +454,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantCare/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Simply Flourishing";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Need to access the camera for taking photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -486,6 +487,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantCare/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Simply Flourishing";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Need to access the camera for taking photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -21,9 +21,7 @@ struct MyCollectionDetailView: View {
     @State var toxicity: Bool = false
     @State var descriptionText: String = ""
     @State var image = Data()
-    
     @State var date = Date()
-    
     @State private var isShowPhotoLibrary = false
     @State private var isShowDatePicker = false
 //    @State private var image = UIImage?
@@ -96,11 +94,6 @@ struct MyCollectionDetailView: View {
                                 Text("\(5)")
                                 Image(systemName: "drop.fill")
                             }.tag(5)
-//                       Text("\(1)").tag(1)
-//                       Text("\(2)").tag(2)
-//                       Text("\(3)").tag(3)
-//                       Text("\(4)").tag(4)
-//                       Text("\(5)").tag(5)
                             
                         })
                     }
@@ -128,14 +121,6 @@ struct MyCollectionDetailView: View {
                             Text("\(5)")
                             Image(systemName: "sun.max.fill")
                         }.tag(5)
-                        
-                        
-//                        Text("\(1)").tag(1)
-//                           Text("\(2)").tag(2)
-//                           Text("\(3)").tag(3)
-//                           Text("\(4)").tag(4)
-//                           Text("\(5)").tag(5)
-                        
                     })
                         }
                                                 
@@ -321,7 +306,7 @@ struct MyCollectionDetailView: View {
     func scheduleNotification() -> Void {
         let content = UNMutableNotificationContent()
         content.title = "Watering Reminder"
-        content.body = "Time to water your plant!"
+        content.body = "Time to water your \(plantNameText)!"
         var reminderDate = date
         if reminderDate < Date() {
             if let addedValue = Calendar.current.date(byAdding: .day, value: 1, to: reminderDate) {
