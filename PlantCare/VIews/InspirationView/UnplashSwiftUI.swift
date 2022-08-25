@@ -120,17 +120,12 @@ public struct UnsplashRandom: View {
             Task {
                 await api.fetchImage(clientId: "b9a4743e8c3fc2ff4cd6800bfeedfdcb40f2c803dd119a72eed7e626503b9daa", query: "houseplants", orientation: "landscape") }
             } label: {
-//            label: {
                 ZStack {
-                    // very bottom
                     Rectangle().fill(.ultraThinMaterial)
                         .cornerRadius(12)
-                    // very top
                     Text("More Inspiration")
                     }
                 }.frame(width: 175, height: 40)
-//                Text("More Inspiration")
-//                    }
                 
             }
 }
