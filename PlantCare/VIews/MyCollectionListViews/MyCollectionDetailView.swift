@@ -28,6 +28,7 @@ struct MyCollectionDetailView: View {
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
+        ScrollView  {
         ZStack {
             Color("bg").edgesIgnoringSafeArea(.all)
           
@@ -270,6 +271,7 @@ struct MyCollectionDetailView: View {
         }
         .onDisappear {
             collectionViewModel.loadFromPersistenceStore()
+    }
     }
 }
     func prepareForCreateCollectionItem(plantName: String?, scientificName: String?, water: Int?, sunlight: Int?, description: String?, staticImage: String?, toxicity: Bool?, date: Date?) {

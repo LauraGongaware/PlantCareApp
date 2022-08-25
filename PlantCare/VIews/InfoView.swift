@@ -60,12 +60,11 @@ struct InfoView: View {
                             .scaledToFit()
                             .clipShape(Circle())
                     }
-                }.padding()
-                    
+                    Spacer()
                     Button(action: {
                         self.isShowAttribution = true
                     }) { Text("Image Attribution")
-//                            .underline()
+                            .underline()
                             .font(.headline)
                             .padding(.bottom)
                     } .sheet(isPresented: $isShowAttribution, content: {
@@ -93,6 +92,9 @@ struct InfoView: View {
                         .font(.footnote)
                         }.padding()
                     })
+                }.padding()
+                    
+                   
                             }
                         }
 //                    }
