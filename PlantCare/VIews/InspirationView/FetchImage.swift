@@ -24,7 +24,7 @@ class UnsplashApi: ObservableObject {
                                              
                                              resolvingAgainstBaseURL: true)
         else { state = .failed(URLError(.badURL)); return }
-        components.queryItems = [URLQueryItem(name: "client_id", value: "b9a4743e8c3fc2ff4cd6800bfeedfdcb40f2c803dd119a72eed7e626503b9daa")]
+        components.queryItems = [URLQueryItem(name: "client_id", value: "YOUR UNSPLASH ID HERE")]
         if query != "" {components.queryItems?.append(URLQueryItem(name: "query", value: "houseplants"))}
         if orientation != "" {components.queryItems?.append(URLQueryItem(name: "orientation", value: orientation))}
         guard let url = components.url else { state = .failed(URLError(.badURL)); return }

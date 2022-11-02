@@ -12,7 +12,7 @@ struct InspirationView: View {
         ZStack {
             Color("bg").edgesIgnoringSafeArea(.all)
                 VStack {
-                    UnsplashRandom(clientId: "b9a4743e8c3fc2ff4cd6800bfeedfdcb40f2c803dd119a72eed7e626503b9daa", query: "houseplants")
+                    UnsplashRandom(clientId: "YOUR UNSPLASH CLIENT ID", query: "houseplants")
                         }
                     }
                 }
