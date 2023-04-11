@@ -11,6 +11,7 @@ import UIKit
 struct MyCollectionDetailView: View {
     var plantCollection: Plant?
     
+    
     @EnvironmentObject var collectionViewModel: MyCollectionViewModel
     
     @State var plantNameText: String = ""
@@ -26,6 +27,7 @@ struct MyCollectionDetailView: View {
     @State private var isShowDatePicker = false
 //    @State private var image = UIImage?
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         ScrollView  {
@@ -39,7 +41,7 @@ struct MyCollectionDetailView: View {
                         self.isShowPhotoLibrary = true
                     }) { Image(systemName: "photo")
                         .font(.system(size: 15))
-                        .foregroundColor(.black)
+                        .foregroundColor(colorScheme == .light ? .black: .white)
                     }
                 }
                     ZStack {
@@ -130,6 +132,7 @@ struct MyCollectionDetailView: View {
                     }).toggleStyle(SafeForPets())
                     
                     TextEditor(text: $descriptionText)
+                        .background(.white)
                 
             }
                 HStack {
@@ -156,7 +159,7 @@ struct MyCollectionDetailView: View {
                         self.isShowDatePicker = true
                     }) { Image(systemName: "calendar.badge.plus")
                         .font(.system(size: 20))
-                        .foregroundColor(.black)
+                        .foregroundColor(colorScheme == .light ? .black: .white)
                     }
                     .onAppear(perform: requestPush)
                 }

@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct TabBar: View {
+    @Environment(\.colorScheme) var colorScheme
+    
         var body: some View {
             TabView {
                 MyCollectionListView()
                     .tabItem {
                         Label("My Collection", systemImage: "leaf.fill")
-                    
                     }
                 StaticPlantListView()
                     .tabItem {
@@ -27,7 +28,7 @@ struct TabBar: View {
                     .tabItem {
                         Label("Inspiration", systemImage: "sun.and.horizon")
                     }
-            } .accentColor(.black)
+            } .accentColor(colorScheme == .light ? .white: .white)
     }
 }
 

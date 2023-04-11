@@ -118,7 +118,7 @@ public struct UnsplashRandom: View {
         
         Button {
             Task {
-                await api.fetchImage(clientId: "YOUR UNSPLASH ID GOES HERE", query: "houseplants", orientation: "landscape") }
+                await api.fetchImage(clientId: "YOUR API KEY HERE", query: "houseplants", orientation: "landscape") }
             } label: {
                 ZStack {
                     Rectangle().fill(.ultraThinMaterial)
