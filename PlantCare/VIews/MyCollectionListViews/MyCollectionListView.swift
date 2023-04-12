@@ -14,6 +14,7 @@ struct MyCollectionListView: View {
     @State var navigateTo: AnyView?
     @State var currentCollection: [Plant] = []
     @State var isNavigationActive = false
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         NavigationView {
@@ -43,7 +44,7 @@ struct MyCollectionListView: View {
                             MyCollectionDetailView()
                         } label: {
                             Image(systemName: "plus")
-                                .foregroundColor(.black)
+                                .foregroundColor(colorScheme == .light ? .black: .white)
                         }
                     }
                 }

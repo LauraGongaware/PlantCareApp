@@ -36,7 +36,7 @@ class PlantController {
 
         Plant(plantName: "Cactus", scientificName: "various", water: 1, sunlight: 5, description: "Native to desert environments, cactus are an easy to care for houseplant that will need lots of sun, but minimal water.", toxicity: true, staticImage: "cactus"),
 
-        Plant(plantName: "Peace Lily", scientificName: "Spathiphyllum cochlearispathum", water: 4, sunlight: 5, description: "Native to the jungles of Columbia, the peace lily is a flowering houseplant with moderate sun but higher water needs. Fertilize every 2 weeks during the growing season.", toxicity: true, staticImage: "peacelily"),
+        Plant(plantName: "Peace Lily", scientificName: "Spathiphyllum cochlearispathum", water: 4, sunlight: 5, description: "Native to the jungles of Colombia, the peace lily is a flowering houseplant with moderate sun but higher water needs. Fertilize every 2 weeks during the growing season.", toxicity: true, staticImage: "peacelily"),
 
         Plant(plantName: "Alocasia", scientificName: "Alocasia sp.", water: 4, sunlight: 4, description: "Native to the islands of the Philippines, Alocasia are plants with unique foliage. Alocasia thrive best with warm and humid indoor environments and are a more challenging houseplant to own.", toxicity: true, staticImage: "alocasia"),
 

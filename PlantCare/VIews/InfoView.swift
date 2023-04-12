@@ -10,12 +10,14 @@ import SwiftUI
 struct InfoView: View {
     @State var isShowAttribution = false
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
     ZStack {
             Color("bg").edgesIgnoringSafeArea(.all)
         ZStack {
                 Rectangle()
-                    .foregroundColor(.white)
+                .foregroundColor(colorScheme == .light ? .white: .black)
 //            ScrollView {
             ZStack {
                 VStack(alignment: .center) {
@@ -67,6 +69,7 @@ struct InfoView: View {
                             .underline()
                             .font(.headline)
                             .padding(.bottom)
+                            .foregroundColor(colorScheme == .light ? .black: .white)
                     } .sheet(isPresented: $isShowAttribution, content: {
                         VStack(alignment: .leading) {
                     
